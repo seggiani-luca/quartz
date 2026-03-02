@@ -1,5 +1,5 @@
 ## Note di Luca Seggiani
-Questo è la repository di un sito che raccoglie note che ho preso durante i corsi della triennale, disponibile a <https://seggiani-luca.github.io>.
+Questo è la repository di un sito che raccoglie note che ho preso durante i corsi della triennale, disponibile a <https://seggiani-luca.github.io/quartz>.
 
 ### Contenuti
 Sto sperimentando con Quartz per prendere appunti riguardo ai corsi a scelta dell'ultimo anno di Ingegneria Informatica, e anche riguardo ad alcuni interessi personali.
