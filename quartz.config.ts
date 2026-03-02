@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "Note di Luca Seggiani",
     baseUrl: "seggiani-luca.github.io/quartz",
     pageTitleSuffix: "",
-    enableSPA: true,
+    enableSPA: false,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
