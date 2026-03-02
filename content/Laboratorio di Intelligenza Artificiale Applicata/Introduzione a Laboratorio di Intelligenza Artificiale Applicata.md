@@ -1,0 +1,6 @@
+Il corso di laboratorio di informatiche applicate mira ad insegnare il linguaggio [[Python]] da un punto di vista pratico, dare un'introduzione alla *containerizzazione* con **Docker**, e quindi introdurre alcuni concetti di **ML** (*Machine Learning*) e **AI** (*Artificial Intelligence*).
+
+### Data scientist e Software engineer
+Le 2 figure che vogliamo confrontare sono quelle del **data scientist** e del **software engineer**. Queste 2 figure lavorano spesso nello stesso campo, ma mettendo in pratica competenze diverse.
+- Il *data scientist* è colui che vuole estrarre dati e utilizzarli per fare *modeling*, *training*, ecc... In questo si occupa della creazione e gestione di **dataset**. L'attività del data scientist spesso richiede un certo grado di conoscenza riguardo al *dominio* di applicazione, cioè al dominio a cui appartengono i dati del dataset e all'interno del cui dovrà lavorare applicazione che si va a sviluppare;
+- Il *software engineer* è colui che vuole utilizzare le tecnologie e i dati, fra cui quelli forniti dal data scientist, per realizzare un **prodotto** vero e proprio che risolve un qualche tipo di problema. In questo avrà meno competenze riguardanti al *dominio*, ma più conoscenze di carattere tecnico e implementativo.

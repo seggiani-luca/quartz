@@ -1,0 +1,4 @@
+Reti come Internet vengono dette **WAN** (*Wide Area Network*) per la grande copertura che hanno. In particolare in questo tipo di rete abbiamo caratteristiche diverse:
+- Tecnologie che possono essere a commutazione di *circuito* (**POTS**, *Plain Old Telephone Service*) o a commutazione di *pacchetto* (la comune rete Internet). Anche su Internet si cerca oggi di richiamare in qualche modo la filosofia della commutazione di circuito attraverso tecnologie come l'**MPLS** (*Multiprotocol Label Switching*) che intervengono sulla struttura di IP.
+- Servizi digitali dedicati;
+- Reti private **virtuali**, cioè che permettono la formazione di [[Local Area Network]] virtuali distribuite su un'area di copertura più grande. In questo si fanno uso di tecnologie come il tunneling **GRE** (*Generic Routing Encapsulation*) sviluppato da Cisco.

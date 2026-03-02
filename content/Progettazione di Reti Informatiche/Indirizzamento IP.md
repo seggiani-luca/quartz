@@ -1,0 +1,5 @@
+Il protocollo IPv4 è il protocollo di livello *network* storicamente associato ad Internet (anche se oggi si sta cercando di muovere verso IPv6). Un indirizzo IP è formato da un numero naturale su 32 bit, solitamente notato come una stringa dove ogni byte viene riportato come naturale e separato da punti. Ad esempio l'indirizzo `0x00000000` viene riportato come `0.0.0.0`, ecc... Per ottenere gli indirizzi IP si fa uso di configurazione manuale, o nelle [[Local Area Network]], molto più spesso, di protocolli come il **DHCP** (*Dynamic Host Resolution Protocol)*.
+
+In questo lo spazio di indirizzamento IP è molto ridotto ($2^{32}$ indirizzi possibili, tolti gli spazi riservati alle reti locali e l'indirizzo di broadcast). Per questo motivo è stato effettivamente esaurito molto presto. Le soluzioni a questo problema sono state diverse:
+- L'uso di protocolli che prevedono un maggiore spazio di indirizzamento come IPv6 (indirizzi su 128 bit, $2^{128}$ possibilità);
+- Uso di meccanismi come il **NAT** (*Network Address Translation*), che permettono di "mascherare" più dispositivi dietro un unico indirizzo IP all'interno di una [[Local Area Network]].

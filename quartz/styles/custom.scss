@@ -1,3 +1,58 @@
 @use "./base.scss";
+@use "sass:map";
 
-// put your custom CSS here!
+// hide left sidebar
+.left {
+  display: none !important;
+}
+
+// top spacing
+.page-header {
+  margin: 2rem 0 0 !important;
+}
+
+.right {
+  padding: 2rem 2rem 2rem !important;
+}
+
+// hide lines
+hr {
+  display: none;
+}
+
+// fix grid
+$breakpoints: (
+  mobile: 800px,
+  desktop: 1200px,
+);
+
+$mobile: "(max-width: #{map.get($breakpoints, mobile)})";
+$tablet: "(min-width: #{map.get($breakpoints, mobile)}) and (max-width: #{map.get($breakpoints, desktop)})";
+
+.page {
+  & > #quartz-body {
+    grid-template-columns: 1fr 320px !important;
+    grid-template-areas: 
+      "grid-header grid-sidebar-right"
+      "grid-center grid-sidebar-right"
+      "grid-footer grid-sidebar-right" !important;
+
+    @media all and ($tablet) {
+      grid-template-columns: 1fr !important;
+      grid-template-areas: 
+        "grid-header"
+        "grid-sidebar-right"
+        "grid-center"
+        "grid-footer" !important;
+    }
+
+    @media all and ($mobile) {
+      grid-template-columns: 1fr !important;
+      grid-template-areas: 
+        "grid-header"
+        "grid-sidebar-right"
+        "grid-center"
+        "grid-footer" !important;
+    }
+  }
+}
