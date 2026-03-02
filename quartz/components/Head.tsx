@@ -86,10 +86,10 @@ export default (() => {
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 
-        {css.map((resource) => CSSResourceToStyleElement(resource, true))}
+        {css.map((resource) => CSSResourceToStyleElement(resource, false))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
-          .map((res) => JSResourceToScriptElement(res, true))}
+          .map((res) => JSResourceToScriptElement(res, false))}
         {additionalHead.map((resource) => {
           if (typeof resource === "function") {
             return resource(fileData)
