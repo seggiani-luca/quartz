@@ -1,6 +1,15 @@
 @use "./base.scss";
 @use "sass:map";
 
+// redefine breakpoints
+$breakpoints: (
+  mobile: 800px,
+  desktop: 1200px,
+);
+
+$mobile: "(max-width: #{map.get($breakpoints, mobile)})";
+$tablet: "(min-width: #{map.get($breakpoints, mobile)}) and (max-width: #{map.get($breakpoints, desktop)})";
+
 // hide left sidebar
 .left {
   display: none !important;
@@ -11,6 +20,7 @@
   margin: 2rem 0 0 !important;
 }
 
+// page padding
 .page {
   padding-left: 2rem !important;
     
@@ -33,14 +43,6 @@ hr {
 }
 
 // fix grid
-$breakpoints: (
-  mobile: 800px,
-  desktop: 1200px,
-);
-
-$mobile: "(max-width: #{map.get($breakpoints, mobile)})";
-$tablet: "(min-width: #{map.get($breakpoints, mobile)}) and (max-width: #{map.get($breakpoints, desktop)})";
-
 .page {
   & > #quartz-body {
     grid-template-columns: 1fr 320px !important;
