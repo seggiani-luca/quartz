@@ -13,6 +13,14 @@
 
 .page {
   padding-left: 2rem !important;
+    
+  @media all and ($tablet) {
+    padding-left: 0 !important;
+  }
+
+  @media all and ($mobile) {
+    padding-left: 0 !important;
+  }
 }
 
 .right {
