@@ -12,11 +12,11 @@ I tipi predefiniti del Python sono i classici:
 - Numeri interi;
 - Stringhe;
 - Booleani.
-Per quanto riguarda le *collezioni*, si hanno i 4 tipi fondamentali:
-- **Liste**: rappresentate da array dinamiche (non linked list);
-- **Dizionari**: rappresentati da tabelle hash;
-- **Tuple**: sono liste con elementi variegati e immutabili. A differenza delle liste, possono essere usate come record di dizionari;
-- **Insiemi**: rappresentati ancora da tabelle hash (sono effettivamente dizionari verso booleani).
+Per quanto riguarda le [[Collezioni]], si hanno i 4 tipi fondamentali:
+- [[Liste]]: rappresentate da array dinamiche (non linked list);
+- [[Dizionari]]: rappresentati da tabelle hash;
+- [[Tuple]]: sono liste con elementi variegati e immutabili. A differenza delle liste, possono essere usate come record di dizionari;
+- [[Insiemi]]: rappresentati ancora da tabelle hash (sono effettivamente dizionari verso booleani).
 I *file* sono considerati tipi a sé stanti, e infine si ha supporto per le **classi**.
 
 ### Riflessione
