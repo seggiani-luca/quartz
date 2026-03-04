@@ -9,7 +9,7 @@ Sto sperimentando con Quartz per prendere appunti riguardo ai corsi a scelta del
 
 In particolare, sono presenti i seguenti corsi:
 - [[Progettazione di Reti Informatiche]], introdotto in [[Introduzione a Progettazione di Reti Informatiche]]
-- [[Laboratorio di Intelligenza Artificiale Applicata]], introdotto in [[Introduzione a Laboratorio di Intelligenza Artificiale Applicata]]
+- [[Laboratorio di Intelligenza Artificiale Applicata]], introdotto in [[Introduzione a Laboratorio di Intelligenza Artificiale Applicata]]. Sono disponibili anche alcuni [[Esercizi di Laboratorio di Intelligenza Artificiale Applicata]])
 
 ### Note tecniche 
 Queste sono scritte come file [Markdown](https://daringfireball.net/projects/markdown/) che gestisco attraverso [Obsidian](https://obsidian.md/).

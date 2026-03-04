@@ -1,0 +1,16 @@
+Questi sono gli esercizi presi per il corso di "Laboratorio di Intelligenza Artificiale Applicata":
+
+- Esercizio 0: [1_1](1_1.py)
+- Esercizio 1: [1_2](1_2.py)
+- Esercizio 2: [1_3](1_3.py)
+- Esercizio 3: [1_4](1_4.py)
+- Esercizio 4: [1_5](1_5.py)
+- Esercizio 6: [dict_1](dict_1.py)
+- Esercizio 7: [dict_2](dict_2.py)
+- Esercizio 8: [dict_3](dict_3.py)
+- Esercizio 9: [generate](generate.py)
+- Esercizio 10: [set_1](set_1.py)
+- Esercizio 11: [set_2](set_2.py)
+- Esercizio 12: [tup_1](tup_1.py)
+- Esercizio 13: [tup_2](tup_2.py)
+- Esercizio 14: [tup_3](tup_3.py)
