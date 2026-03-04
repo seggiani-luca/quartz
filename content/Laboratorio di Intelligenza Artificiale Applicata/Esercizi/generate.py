@@ -16,5 +16,5 @@ with open(FILE, "w") as md:
     for i, f in enumerate(files):
         if f.name == FILE: 
             continue
-        md.write(f"- Esercizio {i}: [{f.stem}]({f.name})\n")
+        md.write(f"- Esercizio {i + 1}: [{f.stem}]({f.name})\n")
 
