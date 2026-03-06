@@ -44,7 +44,7 @@ def send(pckt, dest_addr):
 	else:
 		# destinatario su un altra sottorete
 		gateway_eth_addr = arp_resolve(gateway_addr) # protocollo ARP (gateway)
-		eth_send(pckt, gateway_eth_addr)             # invia su Ethernet (gatway)
+		eth_send(pckt, gateway_eth_addr)             # invia su Ethernet
 	
 ```
 Come vediamo, nel caso in cui il dispositivo destinatario si va a trovare sulla nostra sottorete, inviamo direttamente il pacchetto a lui (aspettandoci che questo transiti attraverso [[Switch]] per arrivargli direttamente). Altrimenti, dobbiamo inoltrare il pacchetto al *default gateway* (vedere anche [[Local Area Network]].

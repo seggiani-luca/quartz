@@ -1,3 +1,7 @@
+---
+title: Indice 
+---
+
 Questo sito raccoglie note che ho preso durante i corsi della triennale.
 
 ### Contenuti
