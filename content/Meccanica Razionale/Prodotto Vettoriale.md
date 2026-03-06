@@ -37,7 +37,8 @@ $$
 per cui si potrà individuare un qualsiasi vettore $\vec{x}$ come:
 $$
 \vec{x} = (x_1, x_2, x_3) = x_1 \cdot \hat{e}_1 + x_2 \cdot \hat{e}_2 + 
-x_3 \cdot \hat{e}_3$$
+x_3 \cdot \hat{e}_3
+$$
 In questo caso lo svolgimento del prodotto vettoriale $\vec{x} \times \vec{y}$ sarà dato dal determinante della matrice:
 $$
 \vec{x} \times \vec{y} =
@@ -48,4 +49,5 @@ x_1 & x_2 & x_3 \\
 y_1 & y_2 & y_3
 \end{pmatrix}
 = (x_2 y_3 - x_3 y_2) \hat{e}_1 + (x_3 y_1 - x_1 y_3) \hat{e}_2 + (x_1 y_2 - x_2 y_1) \hat{e}_3
-$$da cui la classica formula mnemonica.
+$$
+da cui la classica formula mnemonica.

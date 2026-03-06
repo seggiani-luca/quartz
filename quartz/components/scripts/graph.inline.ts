@@ -531,7 +531,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       if (!x || !y) continue
       n.gfx.position.set(x + width / 2, y + height / 2)
       if (n.label) {
-        n.label.position.set(x + width / 2, y + height / 2)
+	    let yOffset = -nodeRadius(n.simulationData);
+        n.label.position.set(x + width / 2, y + height / 2 + yOffset)
       }
     }
 
