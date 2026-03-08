@@ -43,7 +43,7 @@ dove gli $x_1$, $x_2$, $x_3$ sono quelli della formula precedente.
 ### Da punti a coordinate
 Vediamo quindi di riassumere un ultima volta il processo di conversione da un punto $P$ nello spazio euclideo $\mathbb{E}^3$, rappresentato in maniera affine (quindi senza sistema di riferimento), alla sua rappresentazione $\mathbf{x}_P$ come coordinate in $\mathbb{R}^3$, rispetto ad un dato sistema di riferimento $O \hat{e}_1 \hat{e}_2 \hat{e}_3$. 
 
-![[ref_system.png|800]]
+![[ref_system.png|400]]
 
 1. Abbiamo che innanzitutto dobbiamo  prendere l'elemento dello spazio di traslazione che rappresenta lo scostamento di $P$ dall'origine $O$, cioè: $$\vec{x}_P = P - O \in \mathbb{V}^3$$
 2. Questo dovrà quindi essere riportato alla tripla $(x_1, x_2, x_3)^T \in \mathbb{R}^3$ attraverso la proiezione di sui 3 assi $\hat{e}_1$, $\hat{e}_2$, $\hat{e}_3$ del punto $\vec{x}_P$, cioè: $$\vec{x}_P = \sum_{i = 1}^3 x_i \hat{e}_i, \quad x_i = \, < \vec{x}_P, \hat{e}_i >$$e quindi:$$\mathbf{x}_P = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} < \vec{x}_P, \hat{e}_1 > \\ < \vec{x}_P, \hat{e}_2 > \\ < \vec{x}_P, \hat{e}_3 > \end{pmatrix}$$
