@@ -27,10 +27,12 @@ per cui possiamo portare avanti i nostri calcoli vettoriali in $\mathbb{R}^3$ se
    $$
    g_1(\mathbf{x}, t) = (\mathbf{x} + t \mathbf{u}, t), \quad \mathbf{u} \in \mathbb{R}^3
    $$
+
 2. La *traslazione dell'origine* di uno scostamento spaziale $\mathbf{y}$ e uno scostamento temporale $s$:
    $$
    g_2(\mathbf{x}, t) = (\mathbf{x} + \mathbf{y}, \, t + s). \quad \mathbf{y} \in \mathbb{R}^3, \ s \in \mathbb{R}
    $$
+
 3. L'*isometria spaziale* attraverso una certa matrice $G$, che appunto deve essere isometrica. Le matrici isometriche in $\mathbb{R}$ sono le [[Matrici ortogonali]], e quindi ne sceglieremo una appartenente ad $O(3)$:
    $$
    g_3(\mathbf{x}, t) = (G \mathbf{x}, t), \quad G \in O(3)
