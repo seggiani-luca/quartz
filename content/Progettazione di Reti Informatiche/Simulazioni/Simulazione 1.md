@@ -36,7 +36,7 @@ Giunto allo switch, il pacchetto viene inoltrato a tutti gli altri nodi della re
 </li>
 <li>
 Lo switch potrà quindi riportare la risposta ARP al Terminal 1 A. Notiamo che a questo punto non ha bisogno di inoltrare a tutti i nodi, in quanto la trasmissione da Terminal 1 A a Server DNS è stata registrata, e per le proprietà di <i>self-learning</i> dei router la tabella di forwarding è stata compilata con l'associazione fra la porta del Terminal 1 A (<code>111.111.111.101</code>) e il suo indirizzo Ethernet. Ci riferiamo a questo meccanismo con <i>unicast</i> e <i>multicast</i>. In particolare, possiamo vedere la tabella di forwarding con:
-<pre style="background:black;margin:10px;padding:10px;"><code style="padding:0;"><p style="color:white;margin:0;">Switch>show mac address-table
+<pre style="background:black;margin:10px;padding:10px;"><code style="padding:0;"><p style="color:white;margin:0;">Switch> show mac address-table
 Mac Address Table
 -------------------------------------------
 Mac  Address         Type     Ports
@@ -56,7 +56,7 @@ Al termine di questa operazione, quindi, abbiamo a disposizione l'indirizzo IP d
 </li>
 <li>
 Una volta noto l'IP, procediamo a comunicare con il Web server. Prendiamo per adesso di inviare solo un comando <code>ping</code>. Sempre attraverso l'interfaccia a riga di comando del Terminal 1 A, possiamo dire:
-<pre style="background:black;margin:10px;padding:10px;"><code style="padding:0;"><p style="color:white;margin:0;">C:\>ping 111.111.111.200
+<pre style="background:black;margin:10px;padding:10px;"><code style="padding:0;"><p style="color:white;margin:0;">C:\> ping 111.111.111.200
 Pinging 111.111.111.200 with 32 bytes of data:
 Reply from 111.111.111.200: bytes=32 time=76ms TTL=128
 Reply from 111.111.111.200: bytes=32 time=31ms TTL=128
@@ -99,7 +99,7 @@ Proviamo quindi un esempio leggermente più complicato del precedente: quello di
 <ol>
 <li>
 Come sempre, abbiamo bisogno dell'indirizzo IP del Web server indicato da `serverb.com`. Questo, come abbiamo detto, è già nel DNS della sottorete A, per cui tutta la procedura si svolge esattamente come nello scorso esempio. L'unica differenza è che le tabelle di forwarding dello switch sono già configurate, e quindi tutto si svolge in unicast. Otteniamo quindi il risultato:
-<pre style="background:black;margin:10px;padding:10px;"><code style="padding:0;"><p style="color:white;margin:0;">C:\>nslookup serverb.com
+<pre style="background:black;margin:10px;padding:10px;"><code style="padding:0;"><p style="color:white;margin:0;">C:\> nslookup serverb.com
 Server: [111.111.111.2]
 Address: 111.111.111.2
 Non-authoritative answer:
@@ -109,7 +109,7 @@ Address: 222.222.222.200</p></code></pre>
 <li>
 La prima differenza sta nel fatto che l'indirizzo ricevuto (<code>222.222.222.1</code>)  non è nella sottorete locale. Per il Terminal 1 A occorre quindi prendere l'indirizzo del default gateway ed inoltrare i pacchetti a tale indirizzo. Viene da sé che l'indirizzo fisico del gateway (cioè della porta del router rivolta verso la sottorete A) dovrà essere ricavato con ARP. In questo caso sarà il router stesso che eseguirà un lato del protocollo ARP! 
 Vediamo quindi di fare un <code>ping</code> dal Terminal 1 A al Web server della sottorete B:
-<pre style="background:black;margin:10px;padding:10px;"><code style="padding:0;"><p style="color:white;margin:0;">C:\>ping 222.222.222.200
+<pre style="background:black;margin:10px;padding:10px;"><code style="padding:0;"><p style="color:white;margin:0;">C:\> ping 222.222.222.200
 Pinging 222.222.222.200 with 32 bytes of data:
 Reply from 222.222.222.200: bytes=32 time=55ms TTL=127
 Reply from 222.222.222.200: bytes=32 time=24ms TTL=127
