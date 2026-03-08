@@ -22,7 +22,7 @@ $tablet: "(min-width: #{map.get($breakpoints, mobile)}) and (max-width: #{map.ge
 
 // page padding
 .page {
-  padding-left: 4rem !important;
+  padding-left: 14rem !important;
   padding-right: 12rem !important;
     
   @media all and ($tablet) {
