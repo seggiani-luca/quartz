@@ -93,7 +93,10 @@ Una volta trovata l'espressione della matrice di rotazione $R_\theta$ attorno al
 Ciò che vogliamo calcolare è una matrice di rotazione $R$ che sia funzione di 2 parametri:
 - L'*asse di rotazione* $\mathbf{x}_1$;
 - L'*angolo di rotazione* $\theta$.
-Abbiamo già trovato la matrice che ruota attorno all'asse $\mathbf{x}_1$ di un angolo $\theta$, espressa sulla base $\{ \mathbf{x}_1, \mathbf{b}, \mathbf{a} \}$:$$R_\theta = \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix}$$
+Abbiamo già trovato la matrice che ruota attorno all'asse $\mathbf{x}_1$ di un angolo $\theta$, espressa sulla base $\{ \mathbf{x}_1, \mathbf{b}, \mathbf{a} \}$:
+   $$
+   R_\theta = \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix}
+   $$
 L'obiettivo sarà quindi di:
 1. Trovare 2 vettori $\mathbf{a}$, $\mathbf{b}$ ortogonali a $\mathbf{x}_1$;
 2. Trovare la matrice di cambio di base $Q$, dalla base $\{ \mathbf{x}_1, \mathbf{b}, \mathbf{a} \}$ alla base $\{ \hat{e}_1, \hat{e}_2, \hat{e}_3 \}$;

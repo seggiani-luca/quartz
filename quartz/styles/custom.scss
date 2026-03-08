@@ -22,14 +22,17 @@ $tablet: "(min-width: #{map.get($breakpoints, mobile)}) and (max-width: #{map.ge
 
 // page padding
 .page {
-  padding-left: 2rem !important;
+  padding-left: 4rem !important;
+  padding-right: 12rem !important;
     
   @media all and ($tablet) {
     padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   @media all and ($mobile) {
     padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -69,4 +72,10 @@ hr {
         "grid-footer" !important;
     }
   }
+}
+
+// math formatting
+.katex {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
