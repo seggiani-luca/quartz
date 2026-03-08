@@ -33,7 +33,7 @@ $$
 $$
 Quindi generalmente $\vec{u} \times' \vec{v} = - \vec{u} \times'' \vec{v}$, e i vettori generati appartengono allo stesso span. Decidiamo di adottare terne di vettori base $\hat{e}_1, \hat{e}_2, \hat{e}_3$ *levogire*, e su queste terne di usare il prodotto vettoriale $\times'$.
 
-### In $\mathbf{R}^3$
+### In R3
 Abbiamo che le basi ortonormali $\hat{e}_1, \hat{e}_2, \hat{e}_3$ levogire scelte nello spazio $\mathbb{V}^3$ saranno:
 $$
 \hat{e}_1 =

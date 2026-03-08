@@ -45,8 +45,17 @@ Vediamo quindi di riassumere un ultima volta il processo di conversione da un pu
 
 ![[ref_system.png|400]]
 
-1. Abbiamo che innanzitutto dobbiamo  prendere l'elemento dello spazio di traslazione che rappresenta lo scostamento di $P$ dall'origine $O$, cioè: $$\vec{x}_P = P - O \in \mathbb{V}^3$$
-2. Questo dovrà quindi essere riportato alla tripla $(x_1, x_2, x_3)^T \in \mathbb{R}^3$ attraverso la proiezione di sui 3 assi $\hat{e}_1$, $\hat{e}_2$, $\hat{e}_3$ del punto $\vec{x}_P$, cioè: $$\vec{x}_P = \sum_{i = 1}^3 x_i \hat{e}_i, \quad x_i = \, < \vec{x}_P, \hat{e}_i >$$e quindi:$$\mathbf{x}_P = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} < \vec{x}_P, \hat{e}_1 > \\ < \vec{x}_P, \hat{e}_2 > \\ < \vec{x}_P, \hat{e}_3 > \end{pmatrix}$$
+1. Abbiamo che innanzitutto dobbiamo  prendere l'elemento dello spazio di traslazione che rappresenta lo scostamento di $P$ dall'origine $O$, cioè:    $$
+   \vec{x}_P = P - O \in \mathbb{V}^3
+   $$
+2. Questo dovrà quindi essere riportato alla tripla $(x_1, x_2, x_3)^T \in \mathbb{R}^3$ attraverso la proiezione di sui 3 assi $\hat{e}_1$, $\hat{e}_2$, $\hat{e}_3$ del punto $\vec{x}_P$, cioè:
+   $$
+   \vec{x}_P = \sum_{i = 1}^3 x_i \hat{e}_i, \quad x_i = \, < \vec{x}_P, \hat{e}_i >
+   $$
+   e quindi:
+   $$
+   \mathbf{x}_P = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} < \vec{x}_P, \hat{e}_1 > \\ < \vec{x}_P, \hat{e}_2 > \\ < \vec{x}_P, \hat{e}_3 > \end{pmatrix}
+   $$
 Con questo processo, quindi, ci saremo ricondotti al vettore $\mathbf{x}_P \in \mathbb{R}^3$. Una visualizzazione si può trovare su [Desmos](https://www.desmos.com/3d/dvhybnaggx). Notiamo che questa visualizzazione *"bara"* in quanto in un sistema calcolatore è sostanzialmente impossibile rappresentare uno spazio veramente affine, e sicuramente lo è in Desmos. Per questo motivo sia $O$ che $P$ sono in verità espressi sempre in *coordinate* come vettori di $\mathbb{R}^3$ (e quindi rispetto all'origine nulla). Quindi, scelti i 3 assi $\hat{e}_1$, $\hat{e}_2$ e $\hat{e}_3$ si va a calcolare $x_1$, $x_2$ e $x_3$ usando le solite formule di proiezione su vettore:
 $$
 p_{roj}\left(\vec{u},\vec{v}\right)=\frac{\vec{u}\cdot \vec{v}}{\left|\vec{v}\right|}

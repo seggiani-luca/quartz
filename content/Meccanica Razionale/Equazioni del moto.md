@@ -24,12 +24,12 @@ $$
 Leghiamo quindi il moto del sistema di punti al concetto di **forza**. Di base, la forza $\vec{F}_i$ sarà un vettore in $\mathbb{V}^3$ associato al punto $P_i$ del sistema, che prenderà in argomento la posizione e la velocità di ogni punto del sistema, nonché il tempo. Questo significa che si avrà una funzione:
 $$
 \vec{F}_i : \left( \mathbb{V}^3 \right)^N \times \left( \mathbb{V}^3 \right)^N
- \times \mathbb{R} \rightarrow \mathbb{V}^3
+\times \mathbb{R} \rightarrow \mathbb{V}^3
 $$
 che in coordinate su un sistema di riferimento $\Sigma$ diventa:
 $$
-\mathbf{F}_i : \left( \mathbb{R}^3 \right)^N \times \left( \mathbb{R}^3 \right)^N
- \times \mathbb{R} \rightarrow \mathbb{V}^3
+\mathbf{F}_i : \left( \mathbb{R}^3 \right)^N \times \left( \mathbb{R}^3 \right)^N 
+\times \mathbb{R} \rightarrow \mathbb{V}^3
 $$
 Nello specifico, sarà rispetto a $\mathbb{V}^3$ e quindi rispetto a $\mathbb{R}^3$ riferendoci al sistema di coordinate:
 $$
