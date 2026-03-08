@@ -41,7 +41,11 @@ per cui abbiamo 3 casi possibili:
    $$
    e questo va contro l'assunzione fatta ($R \neq I$). Inoltre, cosa anche più importante, questo significa che per qualsiasi $R \in SO(3)$ esiste un luogo dei punti che restano invariati, (l'autospazio di $\lambda_1$) di dimensione 1, quindi una retta. Questa retta non sarà altro che l'*asse di rotazione* della trasformazione $R$;
 
-2. $\lambda_2 = \lambda_3 = -1$. In questo caso si ha che la matrice $R$ equivale alla rotazione di $\pi$ attorno all'asse di rotazione, in quanto si ha capovolgimento sugli autovettori perpendicolari all'asse. In particolare, si ha che l'autospazio $V_{-1}$ associato a $\lambda_2$ ha dimensione $=2$. Questo si ricava dal fatto che l'autovettore $\mathbf{x}_1$ associato a $\lambda_1$ è perpendicolare all'autovettore $\mathbf{x}_2$ associato a $\lambda_2$, in quanto:$$\mathbf{x}_1 \cdot \mathbf{x}_2 = R^T R \mathbf{x_1} \cdot \mathbf{x}_2 = R \mathbf{x}_1 \cdot R \mathbf{x}_2 = \mathbf{x}_1 \cdot - \mathbf{x}_2 = 0$$Come prima, possiamo completare la base dei 2 autovettori $\{\mathbf{x}_1, \mathbf{x}_2 \}$ nell'autospazio $V_{-1}$ con un terzo autovettore $\mathbf{x}_3$. Secondo procedimenti analoghi a prima (vedere l'equazione per $d_{ij}$), e visto che $\lambda_2 = -1$, si avrà che tale rotazione sulla base $\{\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3 \}$ sarà: 
+2. $\lambda_2 = \lambda_3 = -1$. In questo caso si ha che la matrice $R$ equivale alla rotazione di $\pi$ attorno all'asse di rotazione, in quanto si ha capovolgimento sugli autovettori perpendicolari all'asse. In particolare, si ha che l'autospazio $V_{-1}$ associato a $\lambda_2$ ha dimensione $=2$. Questo si ricava dal fatto che l'autovettore $\mathbf{x}_1$ associato a $\lambda_1$ è perpendicolare all'autovettore $\mathbf{x}_2$ associato a $\lambda_2$, in quanto:
+   $$
+   \mathbf{x}_1 \cdot \mathbf{x}_2 = R^T R \mathbf{x_1} \cdot \mathbf{x}_2 = R \mathbf{x}_1 \cdot R \mathbf{x}_2 = \mathbf{x}_1 \cdot - \mathbf{x}_2 = 0
+   $$
+   Come prima, possiamo completare la base dei 2 autovettori $\{\mathbf{x}_1, \mathbf{x}_2 \}$ nell'autospazio $V_{-1}$ con un terzo autovettore $\mathbf{x}_3$. Secondo procedimenti analoghi a prima (vedere l'equazione per $d_{ij}$), e visto che $\lambda_2 = -1$, si avrà che tale rotazione sulla base $\{\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3 \}$ sarà: 
    $$
    R_{-1} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & -1\end{pmatrix}
    $$
