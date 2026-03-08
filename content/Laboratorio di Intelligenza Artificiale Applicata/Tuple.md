@@ -18,6 +18,7 @@ d = (,)
 e = ()
 f = , # errore
 ```
+
 ### Operazioni sulle tuple
 Sulle tuple valgono tutte le operazioni che valevano sulle [[Liste]], quindi l'indicizzazione come [[Sequenze]], e lo [[Slicing]] (ricordando che, essendo queste *immutabili*, lo slicing restituisce una nuova tupla che non può essere assegnata alla tupla originale, non modificabile). Chiaramente, non è possibile usare altre operazioni che modificano la tupla.
 

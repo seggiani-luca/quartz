@@ -28,8 +28,8 @@ Notiamo che una forma di *comprehension* è disponibile anche per gli [[Insiemi]
 ```python
 insieme = [<espressione> for <elemento> in <sequenza> if <condizione>]
 ```
-
 Dopotutto, avevamo visto come gli [[Insiemi]] supportano in maniera naturale il casting a [[Liste]], e viceversa.
+
 ### Dictionary comprehension
 Anche per i [[Dizionari]] abbiamo una forma di comprehension basata sempre sulla solita sintassi:
 ```python

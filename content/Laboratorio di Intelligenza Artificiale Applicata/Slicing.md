@@ -12,7 +12,6 @@ lista = ["banana", "mela", "avocado"]
 lista[0:-1:1] # "banana", "avocado", "mela"
 lista[0::2] # "banana", "avocado"
 ```
-
 Notiamo che la sintassi dello slicing ricorda quella della funzione `range()` usata ad esempio nei loop [[For]]:
 ```python
 for i in range(1, 5, 2):
