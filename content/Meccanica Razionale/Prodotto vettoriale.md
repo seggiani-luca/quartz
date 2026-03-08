@@ -6,30 +6,23 @@ cioè che porta due vettori in $\mathbb{V}^3$, ad un altro vettore in $\mathbb{V
 
 Del prodotto vettoriale richiediamo 3 proprietà:
 1. **Antisimmetria**: 
-
-$$
-\vec{u} \times \vec{v} = -\vec{v} \times \vec{u}
-$$
-
+   $$
+   \vec{u} \times \vec{v} = -\vec{v} \times \vec{u}
+   $$
    E questa è triviale;
 2. **Regola del modulo**:
-
-$$
-\vec{u} \cdot \vec{v} = 0 \implies |\vec{v} \times \vec{u}| = |\vec{v}||\vec{u}|
-$$
-
+   $$
+   \vec{u} \cdot \vec{v} = 0 \implies |\vec{v} \times \vec{u}| = |\vec{v}||\vec{u}|
+   $$
    dove $\cdot$ rappresenta il comune [[Prodotto scalare]] in $\mathbb{V}^3$. Ricordiamo che prodotto scalare $\vec{u} \cdot \vec{v}$ nullo significa che $\vec{u}$ e $\vec{v}$ sono vettori *paralleli*. In questo il prodotto scalare restituisce un vettore che ha come modulo la superficie del parallelepipedo individuato dai due vettori;
 3. **Conservazione del volume**: introduciamo la formula del **volume segnato** di un parallelepipedo individuato dai tre vettori $\vec{u}$, $\vec{v}$ e $\vec{w}$: 
-
-$$
-V_S = (\vec{u} \times \vec{v}) \cdot \vec{w}, \quad V_S \in \mathbb{R}
-$$
-
+   $$
+   V_S = (\vec{u} \times \vec{v}) \cdot \vec{w}, \quad V_S \in \mathbb{R}
+   $$
    Questa formula può essere approfondita in maniera interattiva su [Desmos](https://www.desmos.com/3d/m2l4v7geih). Perché la nostra definizione di prodotto vettoriale sia coerente, avremo bisogno che il volume $V_S$ del parallelepipedo, considerato qualsiasi ordinamento dei vettori che lo generano, dovrà essere conservato, cioè:
-   
-$$
-(\vec{u} \times \vec{v}) \cdot \vec{w} = (\vec{u} \times \vec{w}) \cdot \vec{v} = (\vec{v} \times \vec{w}) \cdot \vec{u}
-$$
+   $$
+   (\vec{u} \times \vec{v}) \cdot \vec{w} = (\vec{u} \times \vec{w}) \cdot \vec{v} = (\vec{v} \times \vec{w}) \cdot \vec{u}
+   $$
 ### Terne levogire e destrogire
 Applicando la definizione di prodotto vettoriale, si può ricavare che nello spazio $\mathbb{V}^3$ ne esistono esattamente 2, che chiamiamo $\times'$ e $\times''$, il cui risultato differisce solo in termini di segno. Per la precisione, prese le 3 basi ortonormali $\hat{e}_1, \hat{e}_2, \hat{e}_3$, si ha:
 $$
