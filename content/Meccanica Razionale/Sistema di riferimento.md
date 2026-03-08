@@ -29,7 +29,8 @@ P \in \mathbb{E}^3
 $$
 nello spazio di Eulero, alla sua rappresentazione come vettore nello spazio $\mathbb{V}^3$ vettoriale associato al sistema di riferimento:
 $$
-\vec{x}_P = P - O = \sum_{i = 1}^3 x_i \hat{e}_i \in \mathbb{V}^3, \quad P, O \in \mathbb{E}^3$$
+\vec{x}_P = P - O = \sum_{i = 1}^3 x_i \hat{e}_i \in \mathbb{V}^3, \quad P, O \in \mathbb{E}^3
+$$
 o analogamente alla rappresentazione in coordinate (già introdotte in [[Prodotto vettoriale]]) nello spazio $\mathbb{R}^3$ rispetto al sistema di riferimento:
 $$
 \mathbf{x}_P = 
