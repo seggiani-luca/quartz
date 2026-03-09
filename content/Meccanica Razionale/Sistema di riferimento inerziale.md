@@ -121,10 +121,10 @@ Notiamo che questo principio ha delle importanti importanti implicazioni per qua
    $$
    e quindi ottenere $\mathbf{F}_i$ in relazione a $P_{k_1}$ sulla velocità. Quindi, possiamo fare la stessa cosa con la seconda componente $g_2$:
    $$
-   \begin{gather}
+   \begin{gather*}
    \mathbf{y} = -\mathbf{x}_{k_1}(\tau), \quad s = 0 \implies \\
    \mathbf{F}_i = \mathbf{F}_i(\mathbf{x}_1(t) - \mathbf{x}_{k_1}(t), \, ..., 0, \, ..., \mathbf{x}_N(t) - \mathbf{x}_{k_1}(t), \dot{\mathbf{x}}_1(t) - \dot{\mathbf{x}}_{k_1}(t), \, ..., 0, \, ..., \dot{\mathbf{x}}_N(t) - \dot{\mathbf{x}}_{k_1}(t) )
-   \end{gather}
+   \end{gather*}
    $$
    cioè siamo riusciti ad esprimere $\mathbf{F}_i$ in relazione al punto $P_k$, in breve:
    $$
