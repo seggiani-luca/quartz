@@ -3,7 +3,7 @@ Per individuare la posizione di un punto $P$ all'interno di uno spazio euclideo 
 > [!quote] [[Spazio e tempo]]
 > Il fatto che lo spazio euclideo è sostanzialmente uno spazio affine significa che i suoi elementi sono **punti**, e non vale la dualità *punto*/*vettore*. Per riportarci ad uno spazio vettoriale con origine nota e su cui i punti possono essere trattati come vettori avremo bisogno di un [[Sistema di riferimento]].
 
-Formalmente, un sistema di riferimento è una mappa che associa un istante temporale ad un origine $O$ e 3 vettori che indicano le direzioni degli assi, $\hat{e}_1$, $\hat{e}_2$, $\hat{e}_3$:
+Formalmente, un sistema di riferimento è una mappa che associa un istante temporale ad un origine $O$ e 3 [versori](Versore.md) che indicano le direzioni degli assi, $\hat{e}_1$, $\hat{e}_2$, $\hat{e}_3$:
 $$
 t \rightarrow \Sigma(t) = \left( O(t), \hat{e}_1(t), \hat{e}_2(t), \hat{e}_3(t) \right) \in \mathbb{E}^3 \times \left( \mathbb{V^3} \right)^3
 $$

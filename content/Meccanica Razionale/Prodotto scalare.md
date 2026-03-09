@@ -28,6 +28,16 @@ Del prodotto scalare richiediamo 3 proprietà:
    $$
    \vec{u} \cdot \vec{u} > 0, \quad \forall \, \vec{u} \neq 0
    $$
+### In V3
+Concludiamo dicendo che *geometricamente*, il prodotto scalare $\vec{u} \cdot \vec{v}$ corrisponde alla lunghezza del segmento che $\vec{v}$ proietta su $\vec{u}$. Questo si può calcolare semplicemente come:
+$$
+\vec{u} \cdot \vec{v} = |\vec{u}| \cdot |\vec{v}| \cdot \cos(\theta)
+$$
+dove $\theta$ è l'angolo fra i due vettori. Questo significa che possiamo velocemente ricavare l'angolo $\theta$ fra due vettori a partire dal prodotto scalare:
+$$
+\cos(\theta) = \frac{\vec{u} \cdot \vec{v}}{|\vec{u}| \cdot |\vec{v}|}
+$$
+
 ### In R3
 La definizione del prodotto scalare a partire da vettori:
 $$

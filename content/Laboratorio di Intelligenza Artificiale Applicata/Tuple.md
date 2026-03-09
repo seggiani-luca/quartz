@@ -38,12 +38,18 @@ Questi valori possono essere ricavati attraverso la sintassi dell'*unpacking*:
 var0, var2, var2 = var_packed
 ```
 
-Packing e unpacking sono molto utili in diverse situazioni. Di base, permettono di avere in maniera molto semplice il ritorno multiplo da funzioni:
+Packing e unpacking sono molto utili in diverse situazioni. Di base, permettono di avere in maniera molto semplice il ritorno multiplo da [[Funzioni]]:
 ```python
 def fun_multi():
 	return 69, 420
 	
 a, b = fun_multi() # a = 69, b = 420
+```
+
+Per fare l'unpacking in place di una tupla si può usare la [[Sintassi ad asterisco]] `*`. In questo caso l'unpacking viene fatto direttamente nell'espressione dove si usa l'asterisco. Ad esempio, vale per le chiamate di funzione:
+```python
+t = (1, 2, 3)  
+print(*t) # equivale a print(1, 2, 3)
 ```
 
 ### Scambio di variabili

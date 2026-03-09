@@ -1,4 +1,4 @@
-Abbiamo visto come effettuare la [[Descrizione del moto]] su un dato sistema di riferimento. In particolare, avevamo detto riguardo al *moto*:
+Abbiamo visto come effettuare la [[Descrizione del moto]] su un dato [[Sistema di riferimento]]. In particolare, avevamo detto riguardo al *moto*:
 
 > [!quote] [[Descrizione del moto]]
 > Il **moto** di un punto $P \in \mathbb{E}^3$ è una mappa:

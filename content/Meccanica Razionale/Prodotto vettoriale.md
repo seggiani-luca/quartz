@@ -33,6 +33,13 @@ $$
 $$
 Quindi generalmente $\vec{u} \times' \vec{v} = - \vec{u} \times'' \vec{v}$, e i vettori generati appartengono allo stesso span. Decidiamo di adottare terne di vettori base $\hat{e}_1, \hat{e}_2, \hat{e}_3$ *levogire*, e su queste terne di usare il prodotto vettoriale $\times'$.
 
+### In V3
+Concludiamo dicendo che *geometricamente*, il prodotto vettoriale $\vec{u} \times \vec{v}$ corrisponde al vettore perpendicolare ad $\vec{u}$ e $\vec{v}$ di modulo dato da:
+$$
+|\vec{u} \times \vec{v}| = |\vec{u}| \cdot |\vec{v}| \cdot \sin(\theta)
+$$
+dove $\theta$ è l'angolo fra i due vettori. Questa formula equivale all'area del *parallelogramma* individuato dai vettori $\vec{u}$ e $\vec{v}$.
+
 ### In R3
 Abbiamo che le basi ortonormali $\hat{e}_1, \hat{e}_2, \hat{e}_3$ levogire scelte nello spazio $\mathbb{V}^3$ saranno:
 $$
