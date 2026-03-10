@@ -53,8 +53,18 @@ new_list = list(map(lambda x: x * 2, my_list)) # raddoppio my_list
 ```
 
 #### `filter`
-Vediamo l'ultimo esempio, che è quello della `filter`. Questa è analoga alla `map`, ma sfrutta un valore booleano che usa per rimuovere alcuni elementi. Ad esempio:
+Vediamo un esempio simile al precedente, che è quello della `filter`. Questa è analoga alla `map`, ma sfrutta un valore booleano che usa per rimuovere alcuni elementi (rimuove gli elementi che restituiscono `False`, e mantiene quelli che restituiscono `True`). Ad esempio:
 ```python
 my_list = # ...
 new_list = list(filter(lambda x: x % 2 == 0, my_list)) # mantiene i pari
+```
+
+### `any`
+`any` è un'altra funzione eseguibile su iterabili, che valuta se almeno uno degli elementi forniti ha un valore `True`. Se si fornisce il vettore vuoto, restituisce `False`. Si può usare la `any` in congiunzione a `map` per valutare il risultato di una funzione booleana su un vettore, ad esempio:
+```python
+any(num > 10 for num in numbers) # controlla se c'è almeno un numero > 10
+```
+Quello che accade in questo caso è che la sintassi `num > 10 for num in numbers`, analoga alla [[List comprehension]] (vediamo che in verità vengono creati [[Generatori]]), mappa da numeri a booleani, che quindi vengono gestiti da `any`. La stessa cosa fatta con `map` sarebbe:
+```python
+any(map(lambda x: x > 10, numbers))
 ```

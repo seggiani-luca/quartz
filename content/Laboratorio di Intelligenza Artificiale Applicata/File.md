@@ -37,7 +37,7 @@ with open("mio_file.txt", "w") as f:
 	# qui possiamo usare il file 
 # qui il file viene liberato
 ```
-Questo permette di ottenere la chiamata automatica della `close()` alla fine del blocco che gestisce il file, nonché la gestione delle eccezioni durante la gestione dello stesso. In particolare, esistono due funzioni *nascoste* di `open()`:
+Questo permette di ottenere la chiamata automatica della `close()` alla fine del blocco che gestisce il file, nonché la gestione delle [[Eccezioni]] durante la gestione dello stesso. In particolare, esistono due funzioni *nascoste* di `open()`:
 - `__enter__()`: acquisisce la risorsa file e la restituisce;
 - `__exit__()`: libera la risorsa file.
 Quello che fa il blocco `with ... as ...` è chiamare automaticamente tali funzioni.
