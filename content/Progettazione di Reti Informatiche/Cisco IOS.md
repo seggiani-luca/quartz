@@ -45,14 +45,14 @@ Questo comando permette di ottenere informazioni riguardo a tutta una serie di c
 - `show startup-config` - Mostra la configurazione salvata presente nella NVRAM;
 - `show running-config` - Mostra il contenuto del file di configurazione attualmente in esecuzione oppure la configurazione di una specifica interfaccia o le informazioni della map class;
 - `show ip interface` - Mostra le statistiche IPv4 per tutte le interfacce di un router: quindi informazioni sullo stato `up` o `down` dell'interfaccia e del protocollo, nonché l'indirizzo configurato, ecc... Per visualizzare le statistiche di una specifica interfaccia, usare il comando `show ip interface` seguito dal numero di slot/porta dell’interfaccia specifica. `show ip interface brief` è una variante del comando utile per ottenere rapidamente un riepilogo delle interfacce e del loro stato operativo:
--    ```
-   Router_A#show ip interface brief
-   Interface            IP-Address    OK? Method Status                Protocol
-   GigabitEthernet0/0/0 222.222.222.1 YES manual up                    up 
-   GigabitEthernet0/0/1 111.111.111.1 YES manual up                    up
-   GigabitEthernet0/0/2 unassigned    YES unset  administratively down down
-   Vlan1                unassigned    YES unset  administratively down down
-   ```
+```
+Router_A#show ip interface brief
+Interface            IP-Address    OK? Method Status                Protocol
+GigabitEthernet0/0/0 222.222.222.1 YES manual up                    up 
+GigabitEthernet0/0/1 111.111.111.1 YES manual up                    up
+GigabitEthernet0/0/2 unassigned    YES unset  administratively down down
+Vlan1                unassigned    YES unset  administratively down down
+```
 
 ### Configurazione delle interfacce
 Vediamo come si accede all'ambiente di configurazione e si configurano le interfacce montate su un router. Nella scorsa sezione abbiamo visto come `show ip interface brief` ci dà una vista panoramica di tutte le interfacce montate e il loro stato. Ad un primo avvio, si avrà che queste sono tutte `down` e senza un indirizzo IP impostato (*administratively down*). Vorremo quindi procedere con la configurazione.
