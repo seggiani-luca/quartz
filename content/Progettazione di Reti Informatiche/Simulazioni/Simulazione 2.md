@@ -52,7 +52,6 @@ Router_A(config-line)#transport input telnet
 Come vediamo, prima di impostare una password, ci viene impedito di dare la configurazione `login` (in quanto non c'è una password da chiedere durante l'autenticazione). Dopo averla impostata, possiamo invece attivare il login e offrire il servizio `telnet`.
 
 A questo punto, da una macchina esterna collegata al router, potremmo effettuare l'operazione di collegamento al router via `telnet`:
-
 ```
 # terminale calcolatore (sulla sottorete del router)
 C:\>telnet 222.222.222.1
@@ -72,7 +71,6 @@ Qui ci siamo collegati al router all'indirizzo `222.222.222.1/24`, quindi sulla 
 Telnet potrebbe risultare un protocollo porco sicuro (tutto, incluse le password, viaggia in chiaro). Un miglioramento potrebbe quindi essere dato dall'utilizzo di **SSH** (*Secure SHell*).
 
 Impostare *SSH* è leggermente più complesso rispetto a Telnet. In particolare, dobbiamo anche impostare un nome di dominio (non significativo al protocollo in sé per sé), generare una *chiave*, e creare un *utente*. Queste operazioni si svolgono come segue nel terminale del router:
-
 ```
 Router_A#config terminal
 Enter configuration commands, one per line. End with CNTL/Z.
@@ -90,7 +88,6 @@ Router_A(config)#end
 ```
 
 Notiamo come tutte queste operazioni si svolgono nella modalità *Global Configuration*: sono infatti operazioni globali al router. Quando si procederà a configurare l'interfaccia `vty` per attivare SSH con `transport input ssh`, ci verrà subito segnalata la disponibilità di SSH:
-
 ```
 Router_A(config)#line vty 0 4
 *Mar 1 2:30:35.323: RSA key size needs to be at least 768 bits for ssh version 2
@@ -100,7 +97,6 @@ Router_A(config-line)#end
 ```
 
 A questo punto SSH sarà attivo e potremo usarlo per accedere al router da terminale remoto. Vediamo il comando specifico:
-
 ```
 C:\>ssh -l admin 222.222.222.1
 Password:
@@ -119,7 +115,6 @@ Come vediamo, quindi, abbiamo formato due sottoreti:
 I due router (A e B) sono collegati via Gigabit Ethernet, e si trovano sulla sottorete `111.111.111.0/24`. 
 
 Al momento, se si prova a collegarsi al terminale PC0 a partire dal PC1 (ad esempio con un comando `ping`) si ha fallimento, in quanto il gateway (cioè il router B) non è capace di trovare un percorso alla sottorete A.
-
 ```
 C:\>ping 222.222.222.10
 Pinging 222.222.222.10 with 32 bytes of data:
@@ -132,7 +127,6 @@ Configuriamo quindi delle `route` *statiche* fra i due router che puntino alle s
 - La sottorete di destinazione, e quindi anche la sua maschera, che per il router A sarà `223.223.223.0/24` (la sottorete B), e che per il router B sarà `222.222.222.0/24` (la sottorete A);
 - Il *next hop* per l'accesso a tale sottorete, che per il router A sarà `111.111.111.2` (il router B) e per il router B sarà `111.111.111.1` (il router A).
 Questo si può quindi fare usando `ip route`:
-
 ```
 # router A
 Router_A(config)#ip route 223.223.223.0 255.255.255.0 111.111.111.2

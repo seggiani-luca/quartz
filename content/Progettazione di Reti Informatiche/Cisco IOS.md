@@ -36,7 +36,50 @@ Router (config-if)#
 ```
 significa che siamo in modalità *privilegiata* (simbolo `#` contro simbolo `>`), di configurazione (`config`) delle interfacce (`if`).
 
-Vediamo quindi quali sono i comandi più importanti di IOS.
+### Aiuto integrato
+Cisco IOS fornisce un sistema di *aiuto* integrato accessibile digitando `?`.
+- Digitandolo dopo che si è digitato qualche carattere, mostra i comandi che iniziano con i caratteri inseriti . Notiamo che in IOS un comando è preso per buono appena si digitano i caratteri prefissi minimi che non diano ambiguità con altri comandi;
+- Digitandolo dopo che si è digitato un comando, e quindi uno spazio, mostra tutte le opzioni disponibili per tale comando;
+- Digitandolo dopo che si è digitato un comando e un opzione, mostra il formato dell'opzione selezionata;
+- Digitandolo da un terminale vuoto, lista i comandi disponibili nella modalità corrente. Ad esempio, dopo aver fatto `enable` per accedere alla modalità privilegiata, abbiamo il seguente listato:
+
+| Comando    | Descrizione                                                 | Prefisso min. |
+| ---------- | ----------------------------------------------------------- | ------------- |
+| Exec       | Session number to resume                                    | `ex`          |
+| auto       | Exec level Automation                                       | `au`          |
+| clear      | Reset functions                                             | `cl`          |
+| clock      | Manage the system clock                                     | `clo`         |
+| configure  | Enter configuration mode                                    | `conf`        |
+| connect    | Open a terminal connection                                  | `conn`        |
+| copy       | Copy from one file to another                               | `cop`         |
+| debug      | Debugging functions (see also 'undebug')                    | `deb`         |
+| delete     | Delete a file                                               | `del`         |
+| dir        | List files on a filesystem                                  | `di`          |
+| disable    | Turn off privileged commands                                | `disa`        |
+| disconnect | Disconnect an existing network connection                   | `disco`       |
+| enable     | Turn on privileged commands                                 | `en`          |
+| erase      | Erase a filesystem                                          | `er`          |
+| exit       | Exit from the EXEC                                          | `exi`         |
+| logout     | Exit from the EXEC                                          | `lo`          |
+| mkdir      | Create new directory                                        | `mk`          |
+| more       | Display the contents of a file                              | `mo`          |
+| no         | Disable debugging informations                              | `n`           |
+| ping       | Send echo messages                                          | `pi`          |
+| reload     | Halt and perform a cold restart                             | `rel`         |
+| resume     | Resume an active network connection                         | `resu`        |
+| rmdir      | Remove existing directory                                   | `rm`          |
+| send       | Send a message to other tty lines                           | `se`          |
+| setup      | Run the SETUP command facility                              | `setu`        |
+| show       | Show running system information                             | `sh`          |
+| ssh        | Open a secure shell client connection                       | `ss`          |
+| telnet     | Open a telnet connection                                    | `te`          |
+| terminal   | Set terminal line parameters                                | `ter`         |
+| traceroute | Trace route to destination                                  | `tr`          |
+| undebug    | Disable debugging functions (see also 'debug')              | `und`         |
+| vlan       | Configure VLAN parameters                                   | `vl`          |
+| write      | Write running configuration to memory, network, or terminal | `wr`          |
+
+Vediamo quindi quali sono i comandi e le funzioni più importanti di IOS.
 ### Comando `show`
 Questo comando permette di ottenere informazioni riguardo a tutta una serie di caratteristiche e parametri del router. In particolare si ha:
 - `show interfaces` - Mostra le statistiche di *livello 1* e *livello 2* per tutte le interfacce del dispositivo. Possiamo quindi usarlo per ottenere informazioni riguardo agli indirizzi MAC (`show interfaces | include address`) e altre caratteristiche di livello fisico o link delle interfacce;
@@ -88,10 +131,10 @@ Gli argomenti `0` e `4`, invece, indicano che vogliamo configurare i `vty` (term
 Le impostazioni di configurazione disponibili sono quindi:
 - `login` - Attiva l'autenticazione della linea, rendendola disponibile all'accesso tramite password;
 - `password` - Permette di specificare la password da usare per effettuare l'accesso, attivato tramite il comando precedente (`login`);
+- `secret` - Permette di specificare una password sicura, che viene criptata prima di essere memorizzata;
 - `transport input` - Permette di specificare la modalità di accesso al terminale se si parla di `vty`. In particolare, si può configurare l'accesso via *Telnet* o via *SSH* (*Secure SHell*). 
 
 Per tornare all'esempio, vediamo come configurare un router per esporre la shell Telnet su tutte le linee `vty`:
-
 ```
 # terminale router
 Router_A(config)#line vty 0 4
@@ -109,7 +152,6 @@ Router_A(config-line)#transport input telnet
 Come vediamo, prima di impostare una password, ci viene impedito di dare la configurazione `login` (in quanto non c'è una password da chiedere durante l'autenticazione). Dopo averla impostata, possiamo invece attivare il login e offrire il servizio `telnet`.
 
 A questo punto, da una macchina esterna collegata al router, potremmo effettuare l'operazione di collegamento al router via `telnet`:
-
 ```
 # terminale calcolatore (sulla sottorete del router)
 C:\>telnet 222.222.222.1
