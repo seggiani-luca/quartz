@@ -2,12 +2,12 @@ Abbiamo che i [[Router]] sono interconnessi fra di loro e con gli altri [[Appara
 
 ### Connettività in [[Local Area Network]]
 Approfondiamo quindi il tipo di connettori fisici che possiamo trovare nei *backplane* nella rete, prima per quanto riguarda la connettività nelle [[Local Area Network]] (quindi gli home network o le reti istituzionali, ecc..):
-- *RJ45*: il connettore tipicamente usato per Ethernet su **TP** (*Twisted Pair*), straight-through o cross-over. Deriva da uno standard di origine telefonica (**RJ**, *Registered Jack*), di cui fanno parte anche *RJ11*, *RJ14*, e *RJ25* (rispettivamente per connessioni telefoniche su 1, 2 o 3 linee). ![[rj45.png|800]]
+- *RJ45*: il connettore tipicamente usato per [[Ethernet]] su **TP** (*Twisted Pair*), straight-through o cross-over. Deriva da uno standard di origine telefonica (**RJ**, *Registered Jack*), di cui fanno parte anche *RJ11*, *RJ14*, e *RJ25* (rispettivamente per connessioni telefoniche su 1, 2 o 3 linee). ![[rj45.png|800]]
   RJ45 collega 8 linee (4 TP), di cui a seconda dello standard Ethernet vengono usate la metà o tutte per permettere la comunicazione full duplex (coppie Rx+,- e Tx+,-);
 
 ![[optic_connectors.png|800]]
 
-- Connettori **ST** (*Straight Tip*): connettori per la fibra ottica vecchio stile, formati da una punta in ceramica e un sistema di chiusura ad anello. Vengono usati in vecchie installazioni Ethernet ma sono oggi soppiantati da SC e LC (che vediamo subito);
+- Connettori **ST** (*Straight Tip*): connettori per la [[fibra ottica]] vecchio stile, formati da una punta in ceramica e un sistema di chiusura ad anello. Vengono usati in vecchie installazioni Ethernet ma sono oggi soppiantati da SC e LC (che vediamo subito);
 - Connettori **SC** (*Subscriber Connector*): è il connettore che ha soppiantato ST nelle telecomunicazioni (dagli anni '80), e quindi per le trasmissioni su lunghe distanze;
 - Connettori **LC** (*Lucent Connector*): sviluppato per essere più compatto e avere minore perdita di SC, usato nelle applicazioni ad alta densità e nei data center (dagli anni '90 circa). 
 Notiamo infine che nelle reti in fibra ottica, questi connettori supportano le diverse tipologie di cavi (vedere [[Cavi#Cablaggio in fibra ottica]]):
@@ -18,7 +18,7 @@ e le diverse tipologie di applicazione:
 - *Duplex* per le comunicazioni in 2 direzioni simultanee (quindi formati da 2 fibre ottiche parallele). Solitamente questo tipo di connettori è formato da un unica assembly che unisce 2 connettori.
 
 ### Connettività in [[Wide Area Network]]
-Per quando riguarda la connettività nelle [[Wide Area Network]], connettori per cavi in fibra ottica (o a volte anche Ethernet) vengono comunemente usati. Esistono anche alcuni tipi specifici di cavi usati per collegarsi alle WAN degli ISP:
+Per quando riguarda la connettività nelle [[Wide Area Network]], connettori per cavi in [[fibra ottica]] (o a volte anche [[Ethernet]]) vengono comunemente usati. Esistono anche alcuni tipi specifici di cavi usati per collegarsi alle WAN degli ISP:
 
 ![[wan_connectors.png|800]]
 

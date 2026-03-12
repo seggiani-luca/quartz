@@ -48,4 +48,4 @@ def send(pckt, dest_addr):
 	
 ```
 Come vediamo, nel caso in cui il dispositivo destinatario si va a trovare sulla nostra sottorete, inviamo direttamente il pacchetto a lui (aspettandoci che questo transiti attraverso [[Switch]] per arrivargli direttamente). Altrimenti, dobbiamo inoltrare il pacchetto al *default gateway* (vedere anche [[Local Area Network]].
-Notiamo come in entrambe le situazioni è necessario sfruttare il protocollo **ARP** (*Address Resolution Protocol*), per tradurre gli indirizzi IP (nel primo caso del destinatario, nel secondo del gateway) in indirizzi Ethernet fisici.
+Notiamo come in entrambe le situazioni è necessario sfruttare il protocollo **ARP** (*Address Resolution Protocol*), per tradurre gli indirizzi IP (nel primo caso del destinatario, nel secondo del gateway) in indirizzi [[Ethernet]] fisici.

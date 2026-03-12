@@ -1,7 +1,7 @@
 Gli [[Apparati di rete]] non potrebbero essere connessi se non attraverso **cavi**. Questi rappresentano quindi componenti importanti della rete, importanti al punto che simulatori come [[Cisco Packet Tracer]] ne supportano diverse tipologie adatte a diversi casi di applicazione.
 
 ### Cablaggio in rame
-Lo standard Ethernet si è evoluto negli anni per supportare larghezze di banda sempre maggiori (sopratutto per fare competizione alle diverse altre tecnologie che sono state proposte nel tempo, fra cui ad esempio **ATM** (*Asynchronous Transfer Mode*). La maggior parte dei cavi che ha supportato nella sua evoluzione sono stati in **rame**.
+Lo standard [[Ethernet]] si è evoluto negli anni per supportare larghezze di banda sempre maggiori (sopratutto per fare competizione alle diverse altre tecnologie che sono state proposte nel tempo, fra cui ad esempio **ATM** (*Asynchronous Transfer Mode*). La maggior parte dei cavi che ha supportato nella sua evoluzione sono stati in **rame**.
 
 ![[ethernet_evol.png|800]]
 
@@ -22,7 +22,7 @@ Per collegare fra di loro diversi [[Apparati di rete]], anche in simulatori come
 - **Cross-over**: in questo caso i cablaggi dei due connettori RJ45 sono invertiti. Questo significa che le linee Rx si collegano con le linee Tx e le linee Tx si collegano con le linee Rx. Ciò funziona per collegare apparecchiature ad apparecchiature dello stesso tipo, e quindi per collegare router a router, switch a switch, ecc... Il funzionamento è sempre lo stesso: l'apparecchiatura A invia su Tx aspettando che l'altra stia ascoltando sulla stessa linea, mentre l'altra di default sarebbe pronta a scrivere sulla stessa linea. Invertendo le linee si manda il segnale di una all'Rx dell'altra, e così via.
 
 ### Cablaggio in fibra ottica
-La **fibra ottica** permette di ottenere velocità di trasmissione molto più grandi di Ethernet su rame, anche se a costi maggiori. In questo caso, il segnale non viaggia su conduttori in rame ma sotto forma di segnali luminosi: questi possono viaggiare venendo riflessi dalle pareti del cavo, solitamente in vetro. Fra le altre cose, i segnali ottici sono completamente immuni all'interferenza elettromagnetica. 
+La [[Fibra ottica]] permette di ottenere velocità di trasmissione molto più grandi di Ethernet su rame, anche se a costi maggiori. In questo caso, il segnale non viaggia su conduttori in rame ma sotto forma di segnali luminosi: questi possono viaggiare venendo riflessi dalle pareti del cavo, solitamente in vetro. Fra le altre cose, i segnali ottici sono completamente immuni all'interferenza elettromagnetica. 
 Una conseguenza dell'uso della fibra è che ogni cavo è di default in modo simplex: per ottenere la comunicazione duplex abbiamo bisogno di affiancare due linee parallele (e quindi 2 connettori paralleli, vedere [[Interfacce e porte#Connettività in Wide Area Network]]).
 
 ![[fiber_single_multi.png|400]]

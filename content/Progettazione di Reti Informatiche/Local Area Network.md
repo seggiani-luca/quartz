@@ -1,6 +1,6 @@
 Una **LAN** (*Local Area Network*) è una [rete](Reti%20informatiche.md) dispiegata su un'organizzazione. Solitamente si possono considerare parte di unica LAN i dispositivi che si trovano fino all'*edge* di una rete, e quindi fino al [[Router]] di collegamento all'ISP.
 
-Di una comune LAN Ethernet si possono individuare alcune caratteristiche di rilievo fra cui:
+Di una comune LAN [[Ethernet]] si possono individuare alcune caratteristiche di rilievo fra cui:
 - Protocollo **spanning tree**: si utilizza un protocollo che formi una struttura ad albero di copertura fra gli switch della rete, in modo che non si formino cicli (che di norma gli switch non sanno gestire, essendo componenti "passivi" che si limitano a portare avanti i frame lungo tutta la rete);
 - Ridondanza al **primo hop**: si esce dalla LAN (si fa il primo *hop*) quando si giunge al router di collegamento all'ISP, o comunque al resto di Internet, che solitamente viene detto **default gateway**. Per una questione di ridondanza, solitamente si hanno almeno 2 default gateway: uno principale e un altro di ripiego nel caso il primo fallisca;
 - **Link aggregation**: i dispositivi all'interno di una stessa rete sono spesso unificati all'Internet esterna attraverso meccanismi come il **NAT** (*Network Address Translation*). Questo permette un minore utilizzo dello spazio di indirizzamento di Internet (a riguardo vedere l'[[Indirizzamento IP]]).
