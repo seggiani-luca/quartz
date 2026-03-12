@@ -5,12 +5,12 @@ Approfondiamo quindi il tipo di connettori fisici che possiamo trovare nei *back
 - *RJ45*: il connettore tipicamente usato per Ethernet su **TP** (*Twisted Pair*), straight-through o cross-over. Deriva da uno standard di origine telefonica (**RJ**, *Registered Jack*), di cui fanno parte anche *RJ11*, *RJ14*, e *RJ25* (rispettivamente per connessioni telefoniche su 1, 2 o 3 linee). ![[rj45.png|800]]
   RJ45 collega 8 linee (4 TP), di cui a seconda dello standard Ethernet vengono usate la metà o tutte per permettere la comunicazione full duplex (coppie Rx+,- e Tx+,-);
 
-![[optic_connectors.png]]
+![[optic_connectors.png|800]]
 
 - Connettori **ST** (*Straight Tip*): connettori per la fibra ottica vecchio stile, formati da una punta in ceramica e un sistema di chiusura ad anello. Vengono usati in vecchie installazioni Ethernet ma sono oggi soppiantati da SC e LC (che vediamo subito);
 - Connettori **SC** (*Subscriber Connector*): è il connettore che ha soppiantato ST nelle telecomunicazioni (dagli anni '80), e quindi per le trasmissioni su lunghe distanze;
 - Connettori **LC** (*Lucent Connector*): sviluppato per essere più compatto e avere minore perdita di SC, usato nelle applicazioni ad alta densità e nei data center (dagli anni '90 circa). 
-Notiamo infine che nelle reti in fibra ottica, questi connettori sviluppano le diverse tipologie di cavi:
+Notiamo infine che nelle reti in fibra ottica, questi connettori supportano le diverse tipologie di cavi (vedere [[Cavi#Cablaggio in fibra ottica]]):
 - *Single mode* per le lunghe distanze a bassa frequenza;
 - *Multi mode* per le brevi distanze (e.g. data center) ad alta frequenza.
 e le diverse tipologie di applicazione:
@@ -20,7 +20,7 @@ e le diverse tipologie di applicazione:
 ### Connettività in [[Wide Area Network]]
 Per quando riguarda la connettività nelle [[Wide Area Network]], connettori per cavi in fibra ottica (o a volte anche Ethernet) vengono comunemente usati. Esistono anche alcuni tipi specifici di cavi usati per collegarsi alle WAN degli ISP:
 
-![[wan_connectors.png]]
+![[wan_connectors.png|800]]
 
 - *EIA/TIA-232*, *TIA-439* o *530*, *X.21*, *V.35*, e **HSSI** (*High Speed Serial Interface*): queste erano porte seriale usati in contesti dove esisteva una distinzione fra **DTE** (*Data Terminal Equipment*, sostanzialmente il router della LAN dell'utente) e **DCE** (*Data Communications Equipment*) per il collegamento alla rete dell'ISP. In questo caso, collegavano il router alla **CSU**/**DSU** (*Channel Service Unit* / *Data Service Unit*);
 - *RJ11*: usato per i modem **DSL** (*Digital Subscriber Line*) per il collegamento delle home network a Internet sulla linea telefonica;
