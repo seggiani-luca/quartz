@@ -1,7 +1,7 @@
 Un **router** è un dispositivo di livello *network* (vedere [[Modello OSI]]) che si occupa dell'instradamento di pacchetti IP. In particolare è:
 - Dispositivo di livello 3 (rete) del modello OSI;
 - Collega reti diverse e instrada i pacchetti IP tra di esse;
-- Usa tabelle di routing e protocolli (es. statico, dinamico);
+- Usa una [[Tabella di routing]] e protocolli (es. statico, dinamico);
 - Può fare **NAT**, **DHCP**, e firewall di base (vedere [[Indirizzamento IP]]);
 - Tipicamente collega le [[Local Area Network]] a Internet ([[Wide Area Network]]).
 
@@ -15,6 +15,14 @@ Come tutti i computer, quindi, i router sono dotati di memoria (in particolare, 
 ![[router_backs.png|400]]
 
 Su un router, per abilitare la sua operazione, è solitamente in esecuzione un *sistema operativo per router*, come ad esempio [[Cisco IOS]].
+
+### Piano dati e piano controllo
+Abbiamo che l'operazione del router si svolge a 2 livelli principali:
+- Il piano **dati**, che si occupa solo di instradare i pacchetti IP su diverse reti. In questo, riguarda solamente le porte di ingresso e di uscita del singolo dispositivo, e quindi svolge il singolo "hop" fra un router e l'altro;
+- Il piano di **controllo**, che si occupa di eseguire il routing vero e proprio, cioè ricavare l'hop migliore a partire dall'indirizzo di destinazione (che è completamente slegato dalle porte) dei pacchetti ricevuti. Questo viene fatto per percorsi statici, o eseguendo algoritmi di routing distribuiti.
+Ognuno dei 2 piani ha bisogno di una sua struttura dati:
+- La tabella di *forwarding*, che riguarda il piano dati. Nella nomenclatura Cisco, questa viene detta **FIB** (*Forwarding Information Base*). Questa viene compilata a partire dalla *RIB* (la vediamo subito) generata dagli algoritmi di routing, e dalle route statiche; 
+- La [[Tabella di routing]], che riguarda il piano di controllo. Nella nomenclatura Cisco, questa viene detta **RIB** (*Routing Information Base*).
 
 ### Fase di boot
 Vediamo come si svolge la sequenza di **boot** di un router, studiando il listato che si ottiene sulla console in fase di boot. Prima di tutto, abbiamo che la procedura a grandi linee sarà:

@@ -39,7 +39,7 @@ x_1 \\ x_2 \\ x_3
 \end{pmatrix}
 \in \mathbb{R}^3
 $$
-dove gli $x_1$, $x_2$, $x_3$ sono quelli della formula precedente.
+dove gli $x_1$, $x_2$, $x_3$ sono quelli della formula precedente. Chiamiamo il vettore $\vec{x}$ o $\mathbf{x}$ vettore **posizione**. Per il vettore posizione assumiamo le ipotesi di *regolarità*, cioè che questo sia derivabile infinite volte (cosa che ci tornerà utile in [[Descrizione del moto]]).
 
 ### Da punti a coordinate
 Vediamo quindi di riassumere un ultima volta il processo di conversione da un punto $P$ nello spazio euclideo $\mathbb{E}^3$, rappresentato in maniera affine (quindi senza sistema di riferimento), alla sua rappresentazione $\mathbf{x}_P$ come coordinate in $\mathbb{R}^3$, rispetto ad un dato sistema di riferimento $O \hat{e}_1 \hat{e}_2 \hat{e}_3$. 

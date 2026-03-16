@@ -126,7 +126,8 @@ Anche se cerchiamo di accedere ad un indirizzo accessibile dal gateway (come ad 
 Configuriamo quindi delle `route` *statiche* fra i due router che puntino alle sottoreti che questi gestiscono. Per fare ciò accediamo alla modalità di configurazione globale e aggiungiamo il percorso specificando:
 - La sottorete di destinazione, e quindi anche la sua maschera, che per il router A sarà `223.223.223.0/24` (la sottorete B), e che per il router B sarà `222.222.222.0/24` (la sottorete A);
 - Il *next hop* per l'accesso a tale sottorete, che per il router A sarà `111.111.111.2` (il router B) e per il router B sarà `111.111.111.1` (il router A).
-Questo si può quindi fare usando `ip route`:
+
+Questo si può quindi fare usando `ip route` (come abbiamo visto in [[Tabella di routing]]):
 ```
 # router A
 Router_A(config)#ip route 223.223.223.0 255.255.255.0 111.111.111.2
