@@ -1,0 +1,6 @@
+              | RouterA RouterB RouterC RouterD RouterE RouterF
+--------------+-----------------------------------------------
+192.168.128.0 | Conn.   RouterA RouterA RouterB RouterF RouterC
+192.168.64.0  | RouterC RouterC Conn.   RouterE RouterF Conn.
+192.168.65.0  | RouterB Conn.   RouterB Conn.   RouterD RouterC
+192.168.16.0  | RouterB RouterD RouterF RouterE Conn.   RouterE

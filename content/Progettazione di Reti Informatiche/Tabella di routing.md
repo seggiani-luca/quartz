@@ -70,16 +70,3 @@ In questo semplice esempio è tutto **R** (collegato attraverso protocollo RIP),
 - L'indirizzo del router di *next hop*, cioè il prossimo a cui instradare il pacchetto;
 - La porta attraverso la quale si può raggiungere tale router. Questa sarà quella effettivamente utile al forwarding.
 Notiamo inoltre che le entrate della tabella di routing hanno solitamente un **TTL** (*Time To Live*) dopo il quale vengono invalidate.
-
-### Configurazione di route statiche
-Il tipo più semplice di percorso che possiamo configurare in un router è un percorso **statico**. Questo è un'associazione fissa fra l'indirizzo IP della sottorete destinataria e la porta di uscita del router, senza alcun tipo di TTL.
-
-Per configurare route statiche fra router, quindi accediamo alla modalità di configurazione globale e aggiungiamo il percorso specificando:
-- La *sottorete* di destinazione, e quindi anche la sua maschera (usata per il longest prefix matching);
-- L'indirizzo di *next hop* per l'accesso a tale sottorete. Questo verrà quindi tradotto in una porta fisica, situata sempre sullo stesso router, corrispondente ad una delle sue porte di uscite (che ricordiamo configuriamo con `config terminal`, e quindi `interface`).
-
-Il comando nel complesso ha quindi una sintassi simile alla seguente:
-```
-Router_A(config)#ip route 223.223.223.0 255.255.255.0 111.111.111.2
-Router_B(config)#ip route 222.222.222.0 255.255.255.0 111.111.111.1
-```

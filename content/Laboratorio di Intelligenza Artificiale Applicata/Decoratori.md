@@ -35,6 +35,13 @@ print(greet()) # Output: CIAO MONDO!
 La sintassi dei decoratori "svolge" le funzioni indicate dalla sintassi a chiocciola `@` fornendo come argomento la funzione immediatamente seguente finché non si ottiene una nuova funzione, appunto, decorata. Si possono applicare i decoratori anche alle classi.
 Si possono inoltre accodare più decoratori uno dopo l'altro, combinandone gli effetti (il secondo decoratore prende la funzione decorata dal primo, e così via).
 
+Le *best practice* nell'uso dei decoratori (che capiremo dopo aver letto le seguenti sezioni) saranno quindi:
+- Usare `functools.wraps` per preservare i metadati originali della funzione;
+- Mantenere i decorator semplici e focalizzati su una singola responsabilità;
+- Documentare come il decorator modifica il comportamento della funzione;
+- Considerare i potenziali impatti sulle prestazioni;
+- Usare i decorator integrati quando appropriato invece di crearne di personalizzati (cosa che vale sempre anche per le [[Eccezioni]]).
+
 ### Decoratori con argomenti
 I decoratori possono supportare argomenti (notiamo, gli argomenti della funzione decorata) attraverso il `*args, **kwargs` della classica [[Sintassi ad asterisco]], che prende tutti gli argomenti in formato lista e in formato dizionario (i cosiddetti *keyword arguments*).
 

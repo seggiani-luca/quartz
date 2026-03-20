@@ -1,4 +1,4 @@
-Vediamo una simulazione della sottorete riportata in figura.
+ Vediamo una simulazione della sottorete riportata in figura.
 
 ![[tftp_serverless.png|800]]
 
