@@ -2,7 +2,7 @@ Il **moto** di un punto $P \in \mathbb{E}^3$ è una mappa (in particolare una *f
 $$
 t \rightarrow P(t) \in \mathbb{E}^3, \quad t \in \mathbb{R}
 $$
-cioè che associa ad ogni istante temporale la posizione del punto $P$ a tale istante.  Esempi di moto sono il [[Moto rettilineo]] e il [[Moto circolare]].
+cioè che associa ad ogni istante temporale la posizione del punto $P$ a tale istante.  Esempi di moto sono il [[Moto rettilineo uniforme]] e il [[Moto circolare]].
 
 ### Continuità
 Diciamo che tale mappa è *continua* attraverso la classica definizione:
