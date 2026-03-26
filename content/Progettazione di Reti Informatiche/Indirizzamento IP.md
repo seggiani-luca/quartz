@@ -4,6 +4,8 @@ In questo lo spazio di indirizzamento IP è molto ridotto ($2^{32}$ indirizzi po
 - L'uso di protocolli che prevedono un maggiore spazio di indirizzamento come IPv6 (indirizzi su 128 bit, $2^{128}$ possibilità);
 - Uso di meccanismi come il **NAT** (*Network Address Translation*), che permettono di "mascherare" più dispositivi dietro un unico indirizzo IP all'interno di una [[Local Area Network]].
 
+Una particolarità di IP è che il suo spazio di indirizzamento è *gerarchico*: diverse porzioni dell'indirizzo vengono allocate a descrivere diverse reti. Questa è una funzionalità che non solo organizza l'allocazione degli indirizzi, ma favorisce anche il processo di [[Routing dinamico]].
+
 ### Classful IPv4
 Il metodo tradizionale per l'allocazione degli indirizzi è quello *classful*. In questo caso definiamo un indirizzo come composto dale 4 classi `a.b.c.d`, e consideriamo le seguenti **classi**:
 

@@ -64,6 +64,6 @@ def place(row):
         # backtrack
         board[row][col] = 0 
 
-    return False
+    return
 
 place(0)

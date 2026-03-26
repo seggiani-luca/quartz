@@ -23,4 +23,12 @@ Router_B(config)#ip route 222.222.222.0 255.255.255.0 111.111.111.1
 ```
 
 ### Evitare i cicli
-I cicli sono garantiti essere evitati se viene utilizzato l'albero dei cammini minimi (*shortest-path tree*) verso ogni rete di destinazione per ciascun router. Per grafi orientati con pesi non negativi, l'albero dei cammini minimi è calcolato tramite l'*algoritmo di Dijkstra* (quello che usano algoritmi di routing come **OSPF**, *Open Shortest Path Fist*). Se vengono definiti alcuni vincoli aggiuntivi sulla rete (ad esempio: non utilizzare un certo collegamento per i percorsi primari, ecc...) la situazione si complica. Viene allora definito e risolto (mediante opportune euristiche) un albero dei cammini minimi vincolato (*constrained shortest-path tree*)..
+I cicli sono garantiti essere evitati se viene utilizzato l'albero dei cammini minimi (*shortest-path tree*) verso ogni rete di destinazione per ciascun router. Per grafi orientati con pesi non negativi, l'albero dei cammini minimi è calcolato tramite l'*algoritmo di Dijkstra* (quello che usano algoritmi di routing come **OSPF**, *Open Shortest Path Fist*). Se vengono definiti alcuni vincoli aggiuntivi sulla rete (ad esempio: non utilizzare un certo collegamento per i percorsi primari, ecc...) la situazione si complica. Viene allora definito e risolto (mediante opportune euristiche) un albero dei cammini minimi vincolato (*constrained shortest-path tree*).
+
+### Default static route
+Una route statica predefinita corrisponde a tutti i pacchetti per i quali non esiste un’altra route che corrisponda all'indirizzo di destinazione nella [[Tabella di routing]].
+- La route `0.0.0.0/0` è la route statica predefinita, per cui configurare una route statica corrisponde solitamente nel dire ad un [[Router]] con [[Cisco IOS]] di indirizzare tutto il traffico a destinazioni sconosciute (probabilmente in Internet) ad un certo router di *gateway*:
+```
+Router(config)#ip route 0.0.0.0 0.0.0.0 [exit-interface | ip-address]
+                                         % interfaccia ed addr. del gateway
+```
