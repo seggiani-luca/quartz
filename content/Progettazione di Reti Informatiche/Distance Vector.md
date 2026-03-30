@@ -1,0 +1,3 @@
+**Distance Vector** è un algoritmo di [[Routing dinamico]]. Questo è stato il primo approccio al routing (ad esempio in **RIP**, *Routing Information Protocol*), e consiste nello scambio di informazioni riguardo alle distanze fra vicini nei cosiddetti *vettori di distanze* (appunto, *distance vector*) dai vicini. Il percorso minore viene quindi deciso per passaggi iterativi che cercano di correggere il DV per soddisfare le equazioni di Bellman. 
+
+L'algoritmo di selezione del percorso minore è quindi eseguito in maniera distribuita da tutti i [[Router]] (a differenza del [[Link State]], che invece usa l'interscambio fra router come un modo per ottenere informazioni sulla topologia di rete, e quindi esegue l'algoritmo di Dijkstra in locale su ogni router).
