@@ -75,7 +75,7 @@ Possiamo "abusare" di questa funzionalità inviando pacchetti **ICMP** (*Interne
 3. Un altro pacchetto ICMP di ping viene spedito dal PC0 al PC1, seguendo ancora lo stesso percorso (unico configurato in questo senso): Router0, sottorete `221.221.221.0/24`, Router1;
 4. Nuovamente il PC1 riceve il pacchetto ICMP di ping, e risponde con un ping echo che viene inoltrato al Router1. In questo caso, visto che alla scorsa iterazione ha scelto il percorso per il Router0, il Router1  sceglierà il percorso per il Router2 per tornare al PC0;
 5. Qui avviene l'inghippo: il Router2 non ha veramente un modo per arrivare al PC0, quindi il pacchetto di risposta viene perso nella rete. Tra l'altro, nessuno ha veramente modo di segnalare questo al PC0, o almeno al PC1, in quanto il Router1 ha inviato nella buona fede di una route statica, e il Router2 non ha modo di rispondere (la sua [[Tabella di routing]] non è configurata per raggiungere il PC1, al massimo potrebbe farlo attraverso il Router1).
-Quell che accade, nel complesso, è quindi che un ping ha successo e l'altro no, in un ambiente simulato come [[Cisco Packet Tracer]] in maniera completamente alternativa. Possiamo verificare che questo è il caso analizzando l'output di ping eseguito dal PC0 come appena detto:
+Quello che accade, nel complesso, è quindi che un ping ha successo e l'altro no, in un ambiente simulato come [[Cisco Packet Tracer]] in maniera completamente alternativa. Possiamo verificare che questo è il caso analizzando l'output di ping eseguito dal PC0 come appena detto:
 
 ```
 C:\>ping 112.112.112.2
