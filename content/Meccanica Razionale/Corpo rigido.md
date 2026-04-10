@@ -40,8 +40,8 @@ Il motivo per cui costruiamo i sistemi di riferimento solidali è quello di dare
 
 cioè l'intero sistema di riferimento solidale $\Sigma'$ ha un'unica velocità angolare $\vec{\omega}$ rispetto al sistema di riferimento $\Sigma$. Vale anche il seguente teorema riguardo ai punti:
 
-> [!cite] 
-> Sia $\Sigma$ un sistema di riferimento fisso r $C$ un corpo rigido. Per ogni coppia di punti $P$ e $Q$ del corpo $C$ vale:
+> [!cite] Legge di velocità di un corpo rigido
+> Sia $\Sigma$ un sistema di riferimento fisso e $C$ un corpo rigido. Per ogni coppia di punti $P$ e $Q$ del corpo $C$ vale:
 > $$
 > \vec{v}_P = \vec{v}_Q + \vec{\omega} \times (P - Q)
 > $$
