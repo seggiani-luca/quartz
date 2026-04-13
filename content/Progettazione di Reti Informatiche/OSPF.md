@@ -31,3 +31,26 @@ All'avvio, il protocollo OSPF forma delle *adiacenze* coi router vicini per scam
 - **Comunicazione bidirezionale**: si realizza quando due vicini includono reciprocamente i rispettivi Router ID nei pacchetti Hello;
 - **Sincronizzazione del database**: vengono scambiati pacchetti per garantire che entrambi i vicini abbiano informazioni identiche nei rispettivi database di stato dei link (ancora, vedere i tipi di pacchetti in [[Pacchetto OSPF]]). Ai fini di questo processo, un vicino assume il ruolo di master e l’altro di slave;
 - **Adiacenza completa**: è il punto in cui lo stato di vicinanza viene promosso ad adiacenza vera e propria. Notiamo che una vicinanza può diventare adiacenza solo quando uno dei due router coinvolti è **DR** (*Designated Router*) di una rete, o **BDR** (*Backup Designated Router*), oppure quando i router fanno parte di una rete point-to-point o point-to-multipoint. Notiamo qui che per indirizzare i DR delle aree esiste l'indirizzo multicast riservato (come avevamo ALLSPFRouters per tutti i router) *ALLDRouters* (`224.0.0.6`, sta per *All Designated Routers*).
+
+### Configurazione OSPF
+Per la configurazione del protocollo e l'algoritmo OSPF nei router Cisco con [[Cisco IOS]] in esecuzione, si hanno a disposizione una serie di utility `ospf`. 
+
+Inizialmente, per avviare il processo `ospf` si usa il comando, da ambiente di configurazione:
+```
+Router(config)#router ospf <process-id>
+```
+dove il `<process-id>` è l'indice che assegniamo al processo che stiamo per mandare in esecuzione.
+
+Dopo aver aperto il processo `ospf` dovremmo assegnare un router ID al nostro router (che notiamo non è a priori legato all'indirizzo IP). Di base l'ordine in cui vengono controllate le sorgenti per il router ID è:
+- L'indirizzo configurato col comando `router-id`;
+- Il più alto fra gli indirizzi delle sue interfacce di loopback. Qui conviene fare un approfondimento su cosa è di preciso l'interfaccia di loopback.
+  Nel protocollo IP un blocco di indirizzi viene allocato alle cosiddette *interfacce di loopback*, che sono interfacce virtuali gestite interamente all'interno di un singolo dispositivo. I pacchetti inviati dal dispositivo all'interfaccia di loopback vengono gestiti dallo stack di rete fino al dispatch, quindi immaginati come ricevuti dal dispositivo, e quindi gestiti nuovamente dallo stack di rete fino a tornare al livello application.
+  Talvolta nei router conviene creare interfacce virtuali con indirizzi non di loopback. Condividere gli indirizzi di tali interfacce attraverso protocolli come OSPF permette ai router di pubblicizzare un indirizzo costante, non dipendente dalle interfacce (ricordiamo che un [[Router]] ha un indirizzo per interfaccia).
+- Il più alto fra gli indirizzi delle sue interfacce fisiche in stato `up`.
+
+L'uso di OSPF viene fatto dal router selettivamente sulle interfacce, sulla base della configurazione data. Per questo è predisposto il comando `network`:
+```
+Router(config-router)#network <network-address> <wildcard-mask> area <area-id>
+```
+Questo comando determina quali interfacce, per area, partecipano al processo di routing OSPF. Ogni interfaccia che ha un indirizzo corrispondente a `network-address` contribuirà al protocollo OSPF inviando e ricevendo pacchetti OSPF, e la rete specificata parteciperà agli aggiornamenti di routing OSPF.
+La maschera `wildcard-mask` è il complemento a 1 della maschera di rete dell'indirizzo fornito. Si usa la `wildcard-mask` anziché la comune `subnet-mask` in quanto i primi bit della maschera potrebbero essere alternativamente a 1.
