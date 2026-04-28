@@ -19,4 +19,4 @@ $$
 Questo vale in riferimento a quanto detto prima in [[Descrizione del moto]] e quindi più nello specifico in [[Equazioni del moto]].
 
 ### Terza legge di Newton
-Ad ogni azione corrisponde una reazione uguale in modula ed opposta in verso. Ci basti in quanto ancora non abbiamo incontrato nel resto degli appunti una formulazione matematica di questa legge.
+Ad ogni azione corrisponde una reazione uguale in modulo ed opposta in verso. Ci basti in quanto ancora non abbiamo incontrato nel resto degli appunti una formulazione matematica di questa legge.

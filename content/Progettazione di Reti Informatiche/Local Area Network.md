@@ -8,3 +8,4 @@ Di una comune LAN [[Ethernet]] si possono individuare alcune caratteristiche di 
 Esistono quindi tecnologie LAN avanzate come:
 - Il **controllo degli accessi**, effettuando attraverso *middle box* (vedere [[Apparati di rete]]) e software specializzato per monitorare gli accessi alla rete e quindi garantire determinate caratteristiche di sicurezza (vedere [[Reti informatiche]]). 
 - **LAN virtuali**, una funzionalità particolarmente utile nelle reti aziendali dove diverse "sottoreti" possono essere rese indipendenti anche se gestite dagli stessi switch. 
+

@@ -37,10 +37,10 @@ Come abbiamo detto in [[OSPF#Operazione di OSPF]], dopo il pacchetto di Hello, l
   1. **Router-LSA**: generata da ogni router nell'area, resta all'interno di tale area e descrive connessioni point-to-point con altri router, connessioni a transit network, a stub network, o link virtuali;
   2. **Network-LSA**: generata dai DR, resta all'interno dell area da cui origina e contiene informazioni riguardo ai router connessi al DR che rappresenta la rete;
   3. **Summary-LSA**: generata dall'**ABR** (*Area Boundary Router*), cioè il router di confine dell'area (per noi AS) OSPF, descrive le route verso altre aree alle reti. Queste route possono anche essere soggette a [[Route summarization]];
-  4. **ABSR-LSA**: generata sempre dall'ABR, indica ai router nelle aree come raggiungere l'ABR stesso. Non trasporta reti, ma la raggiungibilità del router che redistribuisce rotte esterne;
-  5. **AS-external-LSA**: generata sempre dall'ABR, descrive route pubblicizzare dall'ABR stesso e ottenute attraverso altri protocollo (ad esempio BGP) che vanno inoltrati in OSPF. Viene diffusa per flooding in tutto l'AS oltre le aree;
+  4. **ASBR-LSA**: generata dall'ABR, indica ai router nelle aree come raggiungere l'**ASBR** (*Autonomous System Boundary Router*). Non trasporta reti, ma la raggiungibilità del router che redistribuisce rotte esterne;
+  5. **AS-external-LSA**: generata dall'**ASBR** (*Autonomous System Boundary Router*), descrive route pubblicizzare dall'ASBR stesso e ottenute attraverso altri protocolli (ad esempio BGP) che vanno inoltrati in OSPF. Viene diffusa per flooding in tutto l'AS oltre le aree;
   6. **MOSPF-group-LSA**: oggi obsoleta, usata in passato per **MOSPF** (*Multicast Open Shortest Path First*);
-  7. **NSSA-external-LSA**: generata dall'ABR, porta le route di tipo 5 all'interno degli **NSSA** (*Not So Stubby Area*);
+  7. **NSSA-external-LSA**: generata dall'ASBR, porta le route di tipo 5 all'interno degli **NSSA** (*Not So Stubby Area*);
   8. **Link-LSA**:  generata da ogni router coinvolto in un link, fornisce l'indirizzo locale al link del router ad ogni altro router sulla rete;
   9. **Intra-Area-Prefix-LSA**: rimpiazza alcuna della funzionalità delle LS di tipo 1 (Router-LSA).
 
