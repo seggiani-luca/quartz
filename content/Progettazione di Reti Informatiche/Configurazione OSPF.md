@@ -1,4 +1,4 @@
-Per la configurazione del protocollo e l'algoritmo [[OSPF]] nei router Cisco con [[Cisco IOS]] in esecuzione, si hanno a disposizione una serie di utility `ospf`. 
+Per la configurazione del protocollo e l'algoritmo [[Open Shortest Path First]] nei router Cisco con [[Cisco IOS]] in esecuzione, si hanno a disposizione una serie di utility `ospf`. 
 
 Inizialmente, per avviare il processo `ospf` si usa il comando, da ambiente di configurazione:
 ```

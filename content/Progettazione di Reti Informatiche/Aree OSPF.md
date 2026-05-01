@@ -1,4 +1,4 @@
-Abbiamo visto in [[Configurazione OSPF]] come configurare il protocollo [[OSPF]] sui router con [[Cisco IOS]]. Vediamo quindi come configurare esplicitamente più **aree** OSPF per un router.
+Abbiamo visto in [[Configurazione OSPF]] come configurare il protocollo [[Open Shortest Path First]] sui router con [[Cisco IOS]]. Vediamo quindi come configurare esplicitamente più **aree** OSPF per un router.
 
 Chiaramente, configurare più aree si farà col già visto comando `network`:
 ```

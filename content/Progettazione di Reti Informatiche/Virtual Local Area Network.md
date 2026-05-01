@@ -13,6 +13,7 @@ Una soluzione a questo problema è dato proprio dalle *VLAN*: attraverso queste 
 ### VLAN intra-switch
 Le VLAN intra-switch vengono disposte all'interno di un singolo [[Switch]], che permette di raggruppare insiemi di porte in domini di broadcast. Questo approccio però risolve il problema solo in parte, in quanto finché non si raggiunge la porta dello switch, l'infrastruttura non può essere condivisa (non si possono "mischiare" più VLAN sulla stessa linea in arrivo allo switch).
 
+### VLAN trunking
 Vogliamo quindi cercare di estendere questo concetto a tutti gli switch della rete, cioè permettere la trasmissione di frammenti appartenenti a più VLAN su una solita linea che connette 2 switch (*trunk*). Abbiamo quindi bisogno di un modo di "decorare" i pacchetti Ethernet che viaggiano nella nostra rete, con informazioni riguardo a non solo *chi* sta inviando il pacchetto e a chi è destinato, ma anche a *quale* VLAN appartiene.
 
 Questo porta ad una tipica conformazione della rete che divide i link in:

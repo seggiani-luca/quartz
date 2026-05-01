@@ -27,7 +27,7 @@ Uno switch per funzionare (cioè per implementare il *self-learning* che abbiamo
 - L'id della *VLAN* a cui il dispositivo deve appartenere, usato per fornire il meccanismo delle VLAN (non si fa switching trasparente fra dispositivi appartenenti a VLAN diverse, ma si delega lo switching al router);
 - Il *tipo* di dispositivo, che potrà essere *statico* (configurato per restare nello switch) o *dinamico* (appreso in maniera dinamica e soggetto ad essere rimosso nel caso di obsolescenza);
 - L'*ageing*, che indica il tempo da cui è stato appreso l'indirizzo MAC, chiaramente utile nel caso di dispositivi dinamici;
-- Stato *STP*, dove **STP** (*Spanning Tree Protocol*, già visto in [[Cisco Packet Tracer#Tipi di evento]]) è un protocollo specifico per il rilevamento di cicli e la riduzione della topologia di rete ad un albero di copertura per gli switch.
+- Stato *STP*, dove **STP** ([[Spanning Tree Protocol]], già visto in [[Cisco Packet Tracer#Tipi di evento]]) è un protocollo specifico per il rilevamento di cicli e la riduzione della topologia di rete ad un albero di copertura per gli switch.
 
 ### Meccanismo di switching
 Il processo di switching di uno switch si riassume quindi come segue:

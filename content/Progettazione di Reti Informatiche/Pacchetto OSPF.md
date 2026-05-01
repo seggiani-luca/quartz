@@ -1,4 +1,4 @@
-Vediamo il dettaglio di come è formato un pacchetto [[OSPF]]. Abbiamo che innanzitutto questo è organizzato come segue:
+Vediamo il dettaglio di come è formato un pacchetto [[Open Shortest Path First]]. Abbiamo che innanzitutto questo è organizzato come segue:
 
 ![[ospf_packet.png]]
 
@@ -10,7 +10,7 @@ Questo header contiene i seguenti valori:
 - La *versione* di OSPF usata;
 - Il *tipo* di pacchetto, che approfondiremo a breve;
 - La *lunghezza* del pacchetto;
-- Informazioni sugli *ID* di router e area a cui appartiene, per maggiori dettagli vedere [[OSPF#AS]];
+- Informazioni sugli *ID* di router e area a cui appartiene, per maggiori dettagli vedere [[Open Shortest Path First#AS]];
 - Infine, il *checksum* e informazioni di *autenticazione* per questioni di sicurezza.
 
 ### Tipi di pacchetto
@@ -20,7 +20,7 @@ Vediamo quali sono i tipi di pacchetto che possiamo incontrare in OSPF. Si ha in
   ![[ospf_hello.png]]
   
   Un pacchetto di Hello contiene quindi tutte le informazioni necessarie a stabilire un *vicinanza* OSPF. Nel caso i parametri dei pacchetti Hello corrispondano, dopo uno scambio a 3 vie, la vicinanza può essere costruita. L'intervallo *Hello Interval* rappresenta la frequenza con cui si invia il pacchetto di Hello ai vicini (solitamente ogni 10 secondi, continuamente anche dopo la fase di avvio), mentre il *Router Dead Interval* rappresenta il tempo massimo che si aspetta un router che non risponde agli Hello prima di dichiararlo come down. Notiamo inoltre che in un pacchetto di Hello si notano il router designato come centrale di quell'area, il suo backup, e la lista delle altre vicinanze scoperte;
-Come abbiamo detto in [[OSPF#Operazione di OSPF]], dopo il pacchetto di Hello, la fase di scambio bidirezionale, e la sincronizzazione dei database, due router che rispettano determinati requisiti possono diventare *adiacenti*. Questa adiacenza viene registrata in un apposito *database delle adiacenze*. Inoltre, ogni router (compresi DR e BDR) ha un database di livello [[Link State]] che contiene l'informazione di routing. Per aggiornare tale database ci sono i pacchetti di **LSA** (*Link State Advertisement*), scambiati fra router effettivamente adiacenti a livello OSPF (o da questi agli altri router), che servono a rappresentare l'informazione di routing vera e propria:
+Come abbiamo detto in [[Open Shortest Path First#Operazione di OSPF]], dopo il pacchetto di Hello, la fase di scambio bidirezionale, e la sincronizzazione dei database, due router che rispettano determinati requisiti possono diventare *adiacenti*. Questa adiacenza viene registrata in un apposito *database delle adiacenze*. Inoltre, ogni router (compresi DR e BDR) ha un database di livello [[Link State]] che contiene l'informazione di routing. Per aggiornare tale database ci sono i pacchetti di **LSA** (*Link State Advertisement*), scambiati fra router effettivamente adiacenti a livello OSPF (o da questi agli altri router), che servono a rappresentare l'informazione di routing vera e propria:
 - **Pacchetto di Descrizione del Database (tipo 2)**: tutti i router nella stessa area condividono lo stesso database di stato dei link, per cui questo pacchetto è quello che consente una sincronizzazione rapida tra router adiacenti senza attendere il flooding dei **LSA** (*Link State Advertisement*);
 - **Pacchetto di Richiesta dello Stato dei Link (tipo 3)**: viene inviato per richiedere uno specifico insieme di LSA a un router adiacente;
 - **Pacchetto di Aggiornamento dello Stato dei Link (tipo 4)**: viene inviato in risposta a una richiesta oppure per implementare il flooding delle LSA. Ogni pacchetto di aggiornamento di livello [[Link State]] contiene più LSA:

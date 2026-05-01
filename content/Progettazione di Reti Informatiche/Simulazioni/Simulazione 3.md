@@ -128,7 +128,7 @@ In [[Cisco Packet Tracer]], abbiamo a disposizione diversi tipi di servizi fra q
 
 ![[tftp_server.png|800]]
 
-Notiamo alcuni dettagli riguardo a questa configurazione: server è collegato ai router attraverso uno switch condiviso (lo Switch TFTP). Questo porta tutti i router a formare effettivamente una rete locale, a cui assegniamo l'indirizzo riutilizzabile `192.168.0.0/24`. Chiaramente, per consentire tale configurazione dovremmo dedicare una porta Ethernet di ciascun router alla connessione allo switch (un altra porta era di per sé collegata alla sottorete che ciascun router serviva). 
+Notiamo alcuni dettagli riguardo a questa configurazione: server è collegato ai router attraverso uno switch condiviso (lo Switch TFTP). Questo porta tutti i router a formare effettivamente una rete locale, a cui assegniamo l'indirizzo riutilizzabile `192.168.0.0/24`. Chiaramente, per consentire tale configurazione dovremmo dedicare una porta Ethernet di ciascun router alla connessione allo switch (un'altra porta era di per sé collegata alla sottorete che ciascun router serviva). 
 
 A questo punto, quindi, possiamo usare il comando `copy` per copiare configurazioni su e dal server. Nello specifico:
 

@@ -111,3 +111,5 @@ Altri indirizzi speciali, secondo la RFC 3330, sono:
 **Indirizzi TEST-NET**
   - 192.0.2.0/24, riservato per l’uso in documentazione e codice di esempio;
   - Non dovrebbe apparire su Internet.
+
+Infine, notiamo che i blocchi CIDR `/31`, che secondo la logica degli indirizzi riservati alla rete e di broadcast (tutti a 0 e tutti a 1 rispettivamente) comprenderebbero effettivamente 0 host, sono supportati dalla RFC 3021 come blocchi point-to-point per collegamenti fra router.
