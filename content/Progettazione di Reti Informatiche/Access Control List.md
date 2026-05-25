@@ -35,4 +35,4 @@ Notiamo che ci si può riferire ad una ACL per numero, o per nome, usando la sin
 ip access-list standard <name>
 # configurazione della ACL
 ```
-dove notiamo si specifica anche il tipo della ACL (`standard` o `extended`). Se si specifica un'ACL per numero, bisogna inserire le regole sequenzialmente e rimuovere l'intera lista in caso di errori. Se si usa un'ACL con nome, si ha invece accesso ad una modalità di configurazione specifica per le ACL, dove si può anteporre un  *numero di sequenza* alle regole.
+dove notiamo si specifica anche il tipo della ACL (`standard` o `extended`). Se si specifica un'ACL standard, bisogna inserire le regole sequenzialmente e rimuovere l'intera lista in caso di errori. Se si usa un'ACL estesa, si ha invece accesso ad una modalità di configurazione specifica per le ACL, dove si può anteporre un  *numero di sequenza* alle regole.
